@@ -92,6 +92,20 @@ public class KeyboardUtil {
         initScrollHandler(rootView, scrollView);
         mKeyboardUtil = this;
     }
+    /**
+     * 最新构造方法，现在都用这个
+     *
+     * @param ctx
+     * @param rootView rootView 需要是LinearLayout,以适应键盘
+     */
+    public KeyboardUtil(Context ctx, RelativeLayout rootView, ScrollView scrollView) {
+        this.mContext = ctx;
+        this.mActivity = (Activity) mContext;
+        widthPixels = mContext.getResources().getDisplayMetrics().widthPixels;
+        initKeyBoardView(rootView);
+        initScrollHandler(rootView, scrollView);
+        mKeyboardUtil = this;
+    }
 
     public KeyboardUtil setRandom(boolean random) {
         this.isRandom = random;
@@ -128,6 +142,21 @@ public class KeyboardUtil {
         initLayoutHeight((LinearLayout) keyBoardLayout);
         this.layoutView = keyBoardLayout;
         rootView.addView(keyBoardLayout);
+
+        if (keyBoardLayout != null && keyBoardLayout.getVisibility() == View.VISIBLE)
+            Log.d("KeyboardUtil", "visible");
+    }
+    private void initKeyBoardView(RelativeLayout rootView) {
+        LayoutInflater inflater = LayoutInflater.from(mContext);
+        keyBoardLayout = inflater.inflate(R.layout.input, null);
+
+        keyBoardLayout.setVisibility(View.GONE);
+        keyBoardLayout.setBackgroundColor(mActivity.getResources().getColor(R.color.product_list_bac));
+        initLayoutHeight((LinearLayout) keyBoardLayout);
+        this.layoutView = keyBoardLayout;
+        RelativeLayout.LayoutParams params=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
+        params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        rootView.addView(keyBoardLayout,params);
 
         if (keyBoardLayout != null && keyBoardLayout.getVisibility() == View.VISIBLE)
             Log.d("KeyboardUtil", "visible");

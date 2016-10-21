@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EcarSKeyboard.iml" filepath="$PROJECT_DIR$/EcarSKeyboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/keyboardlibrary/keyboardlibrary.iml" filepath="$PROJECT_DIR$/keyboardlibrary/keyboardlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/keyboardlibrary/mylibrary.iml" filepath="$PROJECT_DIR$/keyboardlibrary/mylibrary.iml" />
     </modules>
   </component>

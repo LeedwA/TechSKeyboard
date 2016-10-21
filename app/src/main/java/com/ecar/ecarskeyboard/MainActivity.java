@@ -5,27 +5,30 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
 import com.ecar.mylibrary.KeyboardTouchListener;
 import com.ecar.mylibrary.KeyboardUtil;
 
+import urils.ecaray.com.ecarutils.Utils.ContlorKeyboard;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    private LinearLayout rootView;
+    private RelativeLayout rootView;
     private ScrollView scrollView;
     private EditText normalEd1; //普通键盘
-    private EditText specialEd1,specialEd2,specialEd3,specialEd4,specialEd5,specialEd6,specialEd7,specialEd8; //特殊键盘
+    private EditText specialEd1, specialEd2, specialEd3, specialEd4, specialEd5, specialEd6, specialEd7, specialEd8; //特殊键盘
 
     private KeyboardUtil keyboardUtil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_rela);
 
-        rootView = (LinearLayout) findViewById(R.id.root_view);
+        rootView = (RelativeLayout) findViewById(R.id.root_view);
         scrollView = (ScrollView) findViewById(R.id.sv_main);
 
         normalEd1 = (EditText) findViewById(R.id.normal_ed1);
@@ -42,10 +45,11 @@ public class MainActivity extends AppCompatActivity {
         initMoveKeyBoard();
 
     }
+
     private void initMoveKeyBoard() {
         keyboardUtil = new KeyboardUtil(this, rootView, scrollView)
                 .setRandom(true)//设置是否为随机键盘
-                .setOtherEdittext(normalEd1) //不需要切换的键盘
+                .setOtherEdittext(normalEd1) //不需要自定义的的键盘
                 .setKeyBoardStateChangeListener(new KeyBoardStateListener())//监听键盘切换
                 .setInputOverListener(new inputOverListener());//监听输入事件
 
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         specialEd7.setOnTouchListener(new KeyboardTouchListener(keyboardUtil, KeyboardUtil.INPUTTYPE_ABC, -1)); // 设置自定义键盘的ontouth事件
         specialEd8.setOnTouchListener(new KeyboardTouchListener(keyboardUtil, KeyboardUtil.INPUTTYPE_SYMBOL, -1)); // 设置自定义键盘的ontouth事件
 
+//        new ContlorKeyboard().controlKeyboardLayout(findViewById(R.id.root_view), specialEd3);
 
     }
 
