@@ -47,8 +47,8 @@ public class KeyboardUtil {
     public boolean isShow = false;
     InputFinishListener inputOver;
     KeyBoardStateChangeListener keyBoardStateChangeListener;
-    private View layoutView;
-    private View keyBoardLayout;
+    public View layoutView;
+    public View keyBoardLayout;
 
     // 开始输入的键盘状态设置
     public static int inputType = 1;// 默认
