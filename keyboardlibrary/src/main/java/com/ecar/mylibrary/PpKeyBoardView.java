@@ -74,7 +74,7 @@ public class PpKeyBoardView extends KeyboardView {
                 || key.codes[0] == 88
                 || (key.codes[0] == -4 && key.label != null)
                 || key.codes[0] == 46) {
-            drawKeyBackground(R.drawable.btn_keyboard_key2, canvas, key);
+            drawKeyBackground(R.drawable.btn_keyboard_key, canvas, key);
             drawText(canvas, key);
         }
     }

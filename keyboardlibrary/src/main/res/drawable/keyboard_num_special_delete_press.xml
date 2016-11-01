@@ -6,7 +6,7 @@
     <item android:drawable="@mipmap/abc_delete"
         android:bottom="17dp"
         android:top="17dp"
-        android:left="40dp"
-        android:right="40dp"/>
+        android:left="60dp"
+        android:right="60dp"/>
 
 </layer-list>

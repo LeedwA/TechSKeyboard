@@ -7,11 +7,13 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
 import com.ecar.mylibrary.KeyboardTouchListener;
 import com.ecar.mylibrary.KeyboardUtil;
 
 import urils.ecaray.com.ecarutils.Utils.ContlorKeyboard;
+import urils.ecaray.com.ecarutils.Utils.TagUtil;
 
 
 public class MainActivity extends AppCompatActivity {

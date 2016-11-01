@@ -7,26 +7,25 @@
     <RelativeLayout
         android:id="@+id/keyboard_view_top_rl"
         android:layout_width="match_parent"
-        android:background="@drawable/keyboard_general_nom"
+        android:background="@drawable/keyboard_general_top_back"
         android:visibility="visible"
-        android:layout_height="40dp">
+        android:layout_height="50dp">
 
         <TextView
 
             android:id="@+id/keyboard_tips_tv"
             android:text="安全加密键盘"
             android:textColor="@color/app_style"
-
             android:drawablePadding="5dp"
-
             android:gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+
             android:layout_centerHorizontal="true"/>
 
         <TextView
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:text="完成"
             android:id="@+id/keyboard_view_finish"
             android:layout_alignParentRight="true"
@@ -53,9 +52,10 @@
             android:focusableInTouchMode="true"
             android:keyBackground="@drawable/btn_keyboard_key"
             android:keyTextColor="@color/black"
-            android:keyTextSize="28dp"
-            android:labelTextSize="20dp"
-            android:shadowColor="@color/black"
+            android:keyTextSize="22sp"
+            android:labelTextSize="16sp"
+            android:keyPreviewHeight="60dp"
+            android:shadowColor="@color/black_text"
             android:shadowRadius="0.0"
             android:visibility="gone" />
         <!-- 字母键盘样式 -->
@@ -69,12 +69,12 @@
             android:focusableInTouchMode="true"
             android:keyBackground="@drawable/btn_keyboard_abc_key"
             android:keyTextColor="@color/color_3c3c3c"
-            android:keyTextSize="20dp"
+            android:keyTextSize="22sp"
             android:keyPreviewLayout="@layout/keyboardd_preview"
-            android:keyPreviewHeight="70dp"
+            android:keyPreviewHeight="60dp"
             android:keyPreviewOffset="-3dp"
-            android:labelTextSize="15dp"
-            android:shadowColor="@color/black"
+            android:labelTextSize="15sp"
+            android:shadowColor="@color/black_text"
             android:shadowRadius="0.0"
             android:visibility="gone" />
     </RelativeLayout>

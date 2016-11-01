@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.regexp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/DEMOS/zxingfragmentlib-master/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarKeyboard/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/login/entity/ResLogin.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/login/interfaces/LoginContract.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/login/model/LoginModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/login/presenter/LoginPresenter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/login/ui/activity/LoginActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/base/App.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/base/BaseActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/base/BaseModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/base/BasePresenter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/base/IView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/network/Datacenter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/network/HttpUrl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/network/api/ApiService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/network/api/SimpleBackups.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/util/AppUiUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/util/MathsUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/java/com/ecar/ecarnetfream/publics/view/prompt/UpdateDialog.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/res/layout/dialog_update.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/res/layout/progress_dialog.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/app/src/main/res/values/dimens.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/base/BaseSubscriber.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/base/manage/ExManage.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/base/manage/RxManage.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/bean/ResBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/http/api/ApiBox.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/http/converter/ResponseConverter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/http/exception/CommonException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/http/exception/UserException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/interfaces/view/ILoading.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/util/major/Major.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/util/retrofit/MockRetrofitHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/util/rx/RxUnitTestTools.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetFream/mylibrary/src/main/java/com/ecar/mylibrary/util/rx/RxUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetwork/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetwork/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetwork/ecarnetwork/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetwork/ecarnetwork/src/main/java/com/ecar/ecarnetwork/bean/ResBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetwork/ecarnetwork/src/main/java/com/ecar/ecarnetwork/http/api/ApiBox.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetwork/ecarnetwork/src/main/java/com/ecar/ecarnetwork/http/converter/ResponseConverter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetwork/ecarnetwork/src/main/java/com/ecar/ecarnetwork/http/exception/InvalidException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarNetwork/ecarnetwork/src/main/java/com/ecar/ecarnetwork/util/major/Major.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ecar/ecarskeyboard/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_main_rela.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/java/com/ecar/mylibrary/KeyboardTouchListener.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/java/com/ecar/mylibrary/KeyboardUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/java/com/ecar/mylibrary/PpKeyBoardView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/res/drawable/btn_keyboard_key.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/res/drawable/keyboard_general_nom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/res/drawable/keyboard_general_press.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/res/drawable/keyboard_general_top_back.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/res/drawable/keyboard_num_special_delete_nom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/res/drawable/keyboard_num_special_delete_press.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/res/layout/input.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/keyboardlibrary/src/main/res/values/colors.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EcarUtil20160811/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/ContlorKeyboard.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Road_Epark_All_N/road_epark_beijing/src/main/java/com/ecaray/epark/activity/LoginActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Road_Epark_All_N/road_epark_beijing/src/main/java/com/ecaray/epark/activity/service/PayParkingActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/res/layout/activity_wallet.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/res/layout/fragment_wallet_personal.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/src/com/ecaray/easycharge/ui/activity/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/src/com/ecaray/easycharge/ui/activity/WalletActivityPersonal.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/src/com/ecaray/easycharge/ui/fragment/BarCodeScannerFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/src/com/ecaray/easycharge/ui/fragment/CaptureFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/src/com/ecaray/easycharge/ui/fragment/ChargeFragmentManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/src/com/ecaray/easycharge/ui/fragment/ChargeScanFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/src/com/ecaray/easycharge/ui/view/ControlValueEditview.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-0930/src/com/ecaray/easycharge/ui/view/EditWatcherMoney.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../parkBees-andriod-studio-160815/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../parkBees-android-160816/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../parkBees-pda-studio - 160518/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

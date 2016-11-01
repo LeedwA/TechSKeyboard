@@ -7,11 +7,19 @@
     <color name="product_list_bac">#efeef4</color>
     <color name="keyboard_blackground">#bababa</color>
     <color name="black">#000</color>
+    <color name="black_text">#4E4E4E</color>
+
     <color name="color_3c3c3c">#3c3c3c</color>
     <color name="color_999999">#999999</color>
     <color name="color_1a98ff">#1a98ff</color>
     <color name="color_d8dbdf">#d8dbdf</color>
+    <color name="color_glay1">#CCCCCC</color>
+    <color name="color_glay2">#F6F6F6</color>
+    <color name="color_glay3">#F2F2F2</color>
+
+
+
 
     <color name="app_style">#03233b</color>
-    <color name="txt_orange">#ff6800</color>
+    <color name="txt_orange">#FF7500</color>
 </resources>

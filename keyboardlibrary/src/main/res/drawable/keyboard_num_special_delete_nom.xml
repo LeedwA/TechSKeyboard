@@ -2,11 +2,11 @@
 <layer-list
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@drawable/keyboard_special_nom"/>
+    <item android:drawable="@drawable/keyboard_general_nom"/>
     <item android:drawable="@mipmap/abc_delete"
-        android:bottom="17dp"
-        android:top="17dp"
-        android:left="40dp"
-        android:right="40dp"/>
+        android:bottom="18dp"
+        android:top="18dp"
+        android:left="45dp"
+        android:right="45dp"/>
 
 </layer-list>

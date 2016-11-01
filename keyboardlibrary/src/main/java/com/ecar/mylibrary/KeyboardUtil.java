@@ -32,6 +32,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.regex.Pattern;
 
+import static com.ecar.mylibrary.R.id.keyboard_view_finish;
+
 public class KeyboardUtil {
 
     private Context mContext;
@@ -73,10 +75,11 @@ public class KeyboardUtil {
     private View root_view;
     private int scrollTo = 0;
     private KeyboardUtil mKeyboardUtil;
-    private TextView keyboard_tips_tv;
+    public TextView keyboard_tips_tv;
     private static final float TIPS_MARGIN_W = 0.0407f;
     private View inflaterView;
     private boolean isRandom;//是否为随机键盘
+    private TextView keyboard_view_finish;
 
     /**
      * 最新构造方法，现在都用这个
@@ -92,6 +95,7 @@ public class KeyboardUtil {
         initScrollHandler(rootView, scrollView);
         mKeyboardUtil = this;
     }
+
     /**
      * 最新构造方法，现在都用这个
      *
@@ -146,6 +150,7 @@ public class KeyboardUtil {
         if (keyBoardLayout != null && keyBoardLayout.getVisibility() == View.VISIBLE)
             Log.d("KeyboardUtil", "visible");
     }
+
     private void initKeyBoardView(RelativeLayout rootView) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         keyBoardLayout = inflater.inflate(R.layout.input, null);
@@ -154,9 +159,9 @@ public class KeyboardUtil {
         keyBoardLayout.setBackgroundColor(mActivity.getResources().getColor(R.color.product_list_bac));
         initLayoutHeight((LinearLayout) keyBoardLayout);
         this.layoutView = keyBoardLayout;
-        RelativeLayout.LayoutParams params=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        rootView.addView(keyBoardLayout,params);
+        rootView.addView(keyBoardLayout, params);
 
         if (keyBoardLayout != null && keyBoardLayout.getVisibility() == View.VISIBLE)
             Log.d("KeyboardUtil", "visible");
@@ -167,9 +172,9 @@ public class KeyboardUtil {
                 .getLayoutParams();
         RelativeLayout TopLayout = (RelativeLayout) layoutView.findViewById(R.id.keyboard_view_top_rl);
         keyboard_tips_tv = (TextView) layoutView.findViewById(R.id.keyboard_tips_tv);
-        TextView keyboard_view_finish = (TextView) layoutView.findViewById(R.id.keyboard_view_finish);
+        keyboard_view_finish = (TextView) layoutView.findViewById(R.id.keyboard_view_finish);
         setMargins(keyboard_tips_tv, (int) (widthPixels * TIPS_MARGIN_W), 0, 0, 0);
-        keyboard_tips_tv.setVisibility(View.VISIBLE);
+        keyboard_tips_tv.setVisibility(View.GONE);
         setMargins(keyboard_view_finish, 0, 0, (int) (widthPixels * TIPS_MARGIN_W), 0);
         keyboard_view_finish.setOnClickListener(new finishListener());
         if (keyboard_layoutlLayoutParams == null) {
@@ -188,6 +193,13 @@ public class KeyboardUtil {
         } else {
             TopLayoutParams.height = (int) (mActivity.getResources().getDisplayMetrics().heightPixels * SIZE.KEYBOARY_T_H);
         }
+    }
+
+
+    //完成键事件
+    public KeyboardUtil doneOnclick(View.OnClickListener onClickListener) {
+        keyboard_view_finish.setOnClickListener(onClickListener);
+        return this;
     }
 
     private void setMargins(View view, int left, int top, int right, int bottom) {
