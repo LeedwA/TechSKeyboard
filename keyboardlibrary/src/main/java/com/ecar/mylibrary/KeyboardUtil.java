@@ -32,18 +32,16 @@ import java.util.List;
 import java.util.Random;
 import java.util.regex.Pattern;
 
-import static com.ecar.mylibrary.R.id.keyboard_view_finish;
 
 public class KeyboardUtil {
 
     private Context mContext;
     private int widthPixels;
-    private Activity mActivity;
     public PpKeyBoardView keyboardView;
-    public static Keyboard abcKeyboard;// 字母键盘
-    public static Keyboard symbolKeyboard;// 字母键盘
-    public static Keyboard numKeyboard;// 数字键盘
-    public static Keyboard keyboard;//提供给keyboardView 进行画
+    public Keyboard abcKeyboard;// 字母键盘
+    public Keyboard symbolKeyboard;// 字母键盘
+    public Keyboard numKeyboard;// 数字键盘
+    public Keyboard keyboard;//提供给keyboardView 进行画
 
     public boolean isupper = false;// 是否大写
     public boolean isShow = false;
@@ -53,7 +51,7 @@ public class KeyboardUtil {
     public View keyBoardLayout;
 
     // 开始输入的键盘状态设置
-    public static int inputType = 1;// 默认
+    public int inputType = 1;// 默认
     public static final int INPUTTYPE_NUM = 1; // 数字，右下角 为空
     public static final int INPUTTYPE_NUM_FINISH = 2;// 数字，右下角 完成
     public static final int INPUTTYPE_NUM_POINT = 3; // 数字，右下角 为点
@@ -74,7 +72,6 @@ public class KeyboardUtil {
     private ScrollView sv_main;
     private View root_view;
     private int scrollTo = 0;
-    private KeyboardUtil mKeyboardUtil;
     public TextView keyboard_tips_tv;
     private static final float TIPS_MARGIN_W = 0.0407f;
     private View inflaterView;
@@ -89,12 +86,9 @@ public class KeyboardUtil {
      */
     public KeyboardUtil(Context ctx, LinearLayout rootView, ScrollView scrollView) {
         this.mContext = ctx;
-        this.mActivity = (Activity) mContext;
         widthPixels = mContext.getResources().getDisplayMetrics().widthPixels;
         initKeyBoardView(rootView);
         initScrollHandler(rootView, scrollView);
-        mKeyboardUtil = this;
-        initInputType();
     }
 
     /**
@@ -105,12 +99,10 @@ public class KeyboardUtil {
      */
     public KeyboardUtil(Context ctx, RelativeLayout rootView, ScrollView scrollView) {
         this.mContext = ctx;
-        this.mActivity = (Activity) mContext;
+
         widthPixels = mContext.getResources().getDisplayMetrics().widthPixels;
         initKeyBoardView(rootView);
         initScrollHandler(rootView, scrollView);
-        mKeyboardUtil = this;
-        initInputType();
     }
 
     public KeyboardUtil setRandom(boolean random) {
@@ -135,16 +127,13 @@ public class KeyboardUtil {
 
     }
 
-    public static Keyboard getKeyBoardType() {
-        return keyboard;
-    }
 
     private void initKeyBoardView(LinearLayout rootView) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         keyBoardLayout = inflater.inflate(R.layout.input, null);
 
         keyBoardLayout.setVisibility(View.GONE);
-        keyBoardLayout.setBackgroundColor(mActivity.getResources().getColor(R.color.product_list_bac));
+        keyBoardLayout.setBackgroundColor(root_view.getResources().getColor(R.color.product_list_bac));
         initLayoutHeight((LinearLayout) keyBoardLayout);
         this.layoutView = keyBoardLayout;
         rootView.addView(keyBoardLayout);
@@ -156,9 +145,8 @@ public class KeyboardUtil {
     private void initKeyBoardView(RelativeLayout rootView) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         keyBoardLayout = inflater.inflate(R.layout.input, null);
-
         keyBoardLayout.setVisibility(View.GONE);
-        keyBoardLayout.setBackgroundColor(mActivity.getResources().getColor(R.color.product_list_bac));
+        keyBoardLayout.setBackgroundColor(rootView.getResources().getColor(R.color.product_list_bac));
         initLayoutHeight((LinearLayout) keyBoardLayout);
         this.layoutView = keyBoardLayout;
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
@@ -180,20 +168,20 @@ public class KeyboardUtil {
         setMargins(keyboard_view_finish, 0, 0, (int) (widthPixels * TIPS_MARGIN_W), 0);
         keyboard_view_finish.setOnClickListener(new finishListener());
         if (keyboard_layoutlLayoutParams == null) {
-            int height = (int) (mActivity.getResources().getDisplayMetrics().heightPixels * SIZE.KEYBOARY_H);
+            int height = (int) (layoutView.getResources().getDisplayMetrics().heightPixels * SIZE.KEYBOARY_H);
             layoutView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, height));
         } else {
-            keyboard_layoutlLayoutParams.height = (int) (mActivity.getResources().getDisplayMetrics().heightPixels * SIZE.KEYBOARY_H);
+            keyboard_layoutlLayoutParams.height = (int) (layoutView.getResources().getDisplayMetrics().heightPixels * SIZE.KEYBOARY_H);
         }
 
         LinearLayout.LayoutParams TopLayoutParams = (LinearLayout.LayoutParams) TopLayout
                 .getLayoutParams();
 
         if (TopLayoutParams == null) {
-            int height = (int) (mActivity.getResources().getDisplayMetrics().heightPixels * SIZE.KEYBOARY_T_H);
+            int height = (int) (layoutView.getResources().getDisplayMetrics().heightPixels * SIZE.KEYBOARY_T_H);
             TopLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, height));
         } else {
-            TopLayoutParams.height = (int) (mActivity.getResources().getDisplayMetrics().heightPixels * SIZE.KEYBOARY_T_H);
+            TopLayoutParams.height = (int) (layoutView.getResources().getDisplayMetrics().heightPixels * SIZE.KEYBOARY_T_H);
         }
     }
 
@@ -503,13 +491,15 @@ public class KeyboardUtil {
     }
 
     private void initKeyBoard(int keyBoardViewID) {
-        mActivity = (Activity) mContext;
         if (inflaterView != null) {
             keyboardView = (PpKeyBoardView) inflaterView.findViewById(keyBoardViewID);
         } else {
-            keyboardView = (PpKeyBoardView) mActivity
+            keyboardView = (PpKeyBoardView) root_view
                     .findViewById(keyBoardViewID);
         }
+        keyboardView.setKeybordType(inputType);
+        keyboardView.setmKeyBoard(keyboard);
+        keyboardView.invalidate();
         keyboardView.setEnabled(true);
         keyboardView.setOnKeyboardActionListener(listener);
         keyboardView.setOnTouchListener(new View.OnTouchListener() {

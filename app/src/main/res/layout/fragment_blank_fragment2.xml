@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/all_ed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/normal_ed1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="普通键盘" />
+
+        <EditText
+            android:id="@+id/special_ed1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="特殊键盘1-数字，右下角 为空" />
+
+        <EditText
+            android:id="@+id/special_ed2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="特殊键盘2-数字，右下角 完成" />
+
+        <EditText
+            android:id="@+id/special_ed3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="特殊键盘3-数字，右下角 为点" />
+
+        <EditText
+            android:id="@+id/special_ed4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="特殊键盘4-数字，右下角 为X" />
+
+        <EditText
+            android:id="@+id/special_ed5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="特殊键盘5- 数字，右下角 为下一个" />
+
+        <EditText
+            android:id="@+id/special_ed6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="特殊键盘6- 数字，右下角 为下一个" />
+
+        <EditText
+            android:id="@+id/special_ed7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="特殊键盘7-一般的abc" />
+
+        <EditText
+            android:id="@+id/special_ed8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="特殊键盘8-标点键盘" />
+
+    </LinearLayout>
+
+</RelativeLayout>

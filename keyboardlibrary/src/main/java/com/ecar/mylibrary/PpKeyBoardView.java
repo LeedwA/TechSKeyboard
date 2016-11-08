@@ -16,22 +16,28 @@ import java.util.ArrayList;
 public class PpKeyBoardView extends KeyboardView {
     private Context mContext;
     private int rightType = 1;// 右下角
-    private int heightPixels;
-    private float density;
-    public static Keyboard mKeyBoard;
+
+
+    private int keybordType ;// 键盘类型
+
+    public void setKeybordType(int keybordType) {
+        this.keybordType = keybordType;
+    }
+
+    public  void setmKeyBoard(Keyboard mKeyBoard) {
+        this.mKeyBoard = mKeyBoard;
+    }
+
+    public  Keyboard mKeyBoard;
 
     public PpKeyBoardView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.mContext = context;
-        heightPixels = mContext.getResources().getDisplayMetrics().heightPixels;
-        density = mContext.getResources().getDisplayMetrics().density;
     }
 
     public PpKeyBoardView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         this.mContext = context;
-        heightPixels = mContext.getResources().getDisplayMetrics().heightPixels;
-        density = mContext.getResources().getDisplayMetrics().density;
     }
 
     /**
@@ -40,17 +46,19 @@ public class PpKeyBoardView extends KeyboardView {
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mKeyBoard = KeyboardUtil.getKeyBoardType();
+        if(mKeyBoard==null){
+            return;
+        }
         ArrayList<Key>  keys = (ArrayList<Key>) mKeyBoard.getKeys();
 
         for (Key key : keys) {
             // 数字键盘的处理
-            if (mKeyBoard.equals(KeyboardUtil.numKeyboard)) {
+            if (keybordType==KeyboardUtil.INPUTTYPE_NUM) {
                 initRightType(key);
                 drawNumSpecialKey(key, canvas);
-            } else if (mKeyBoard.equals(KeyboardUtil.abcKeyboard)) {
+            } else if (keybordType==KeyboardUtil.INPUTTYPE_ABC) {
                 drawABCSpecialKey(key, canvas);
-            } else if (mKeyBoard.equals(KeyboardUtil.symbolKeyboard)) {
+            } else if (keybordType==KeyboardUtil.INPUTTYPE_SYMBOL) {
                 drawSymbolSpecialKey(key, canvas);
             }
         }
@@ -156,7 +164,7 @@ public class PpKeyBoardView extends KeyboardView {
         paint.setAntiAlias(true);
         // paint.setTypeface(Typeface.DEFAULT_BOLD);
         paint.setColor(Color.BLACK);
-        if (mKeyBoard.equals(KeyboardUtil.numKeyboard)) {
+        if (keybordType==KeyboardUtil.INPUTTYPE_NUM) {
             if (key.label != null) {
                 paint.getTextBounds(key.label.toString(), 0, key.label.toString()
                         .length(), bounds);
@@ -173,7 +181,7 @@ public class PpKeyBoardView extends KeyboardView {
                         * key.height));
                 key.icon.draw(canvas);
             }
-        } else if (mKeyBoard.equals(KeyboardUtil.abcKeyboard)) {
+        } else if (keybordType==KeyboardUtil.INPUTTYPE_ABC) {
             if (key.label != null) {
                 paint.setColor(mContext.getResources().getColor(R.color.color_3c3c3c));
                 paint.getTextBounds(key.label.toString(), 0, key.label.toString()
@@ -181,7 +189,7 @@ public class PpKeyBoardView extends KeyboardView {
                 canvas.drawText(key.label.toString(), key.x + (key.width / 2),
                         (key.y + key.height / 2) + bounds.height() / 2, paint);
             }
-        } else if (mKeyBoard.equals(KeyboardUtil.symbolKeyboard)) {
+        } else if (keybordType==KeyboardUtil.INPUTTYPE_SYMBOL) {
             paint.setColor(mContext.getResources().getColor(R.color.color_3c3c3c));
             paint.getTextBounds(key.label.toString(), 0, key.label.toString()
                     .length(), bounds);
