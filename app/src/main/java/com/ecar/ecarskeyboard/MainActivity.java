@@ -3,6 +3,7 @@ package com.ecar.ecarskeyboard;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -53,7 +54,14 @@ public class MainActivity extends AppCompatActivity {
                 .setRandom(true)//设置是否为随机键盘
                 .setOtherEdittext(normalEd1) //不需要自定义的的键盘
                 .setKeyBoardStateChangeListener(new KeyBoardStateListener())//监听键盘切换
-                .setInputOverListener(new inputOverListener());//监听输入事件
+                .setInputOverListener(new inputOverListener()).doneOnclick(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                               Toast.makeText(MainActivity.this,"键盘",Toast.LENGTH_SHORT).show();
+                    }
+                });//监听输入事件
+
+        keyboardUtil.hideKeyboardLayout(); //隐藏键盘
 
         specialEd1.setOnTouchListener(new KeyboardTouchListener(keyboardUtil, KeyboardUtil.INPUTTYPE_NUM, -1)); // 设置自定义键盘的ontouth事件
         specialEd2.setOnTouchListener(new KeyboardTouchListener(keyboardUtil, KeyboardUtil.INPUTTYPE_NUM_FINISH, -1)); // 设置自定义键盘的ontouth事件

@@ -63,7 +63,7 @@
             android:id="@+id/keyboard_view_abc_sym"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/color_d8dbdf"
             android:focusable="true"
             android:focusableInTouchMode="true"
