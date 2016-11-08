@@ -94,6 +94,7 @@ public class KeyboardUtil {
         initKeyBoardView(rootView);
         initScrollHandler(rootView, scrollView);
         mKeyboardUtil = this;
+        initInputType();
     }
 
     /**
@@ -109,6 +110,7 @@ public class KeyboardUtil {
         initKeyBoardView(rootView);
         initScrollHandler(rootView, scrollView);
         mKeyboardUtil = this;
+        initInputType();
     }
 
     public KeyboardUtil setRandom(boolean random) {

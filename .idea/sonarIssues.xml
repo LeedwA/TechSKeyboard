@@ -408,6 +408,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-20161108/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-20161108/res/layout/fragment_wallet_company.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easyCharge-android-20161108/res/layout/fragment_wallet_personal.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../easyCharge-android-20161108/src/com/ecaray/easycharge/mine/view/activity/WalletActivityCompany.java">
           <value>
             <set />
