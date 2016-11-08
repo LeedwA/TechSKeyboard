@@ -499,7 +499,6 @@ public class KeyboardUtil {
         }
         keyboardView.setKeybordType(inputType);
         keyboardView.setmKeyBoard(keyboard);
-        keyboardView.invalidate();
         keyboardView.setEnabled(true);
         keyboardView.setOnKeyboardActionListener(listener);
         keyboardView.setOnTouchListener(new View.OnTouchListener() {
