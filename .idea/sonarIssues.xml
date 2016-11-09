@@ -473,6 +473,81 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/anim/push_left_in.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/layout/activity_mybag.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/layout/include_near_park_none_data.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/values/styles.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/BaseActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/activity/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/activity/ParkNearViewFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/activity/ParkUserFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/activity/ParkingFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/activity/StartActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/activity/parking/FastParkActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/activity/parking/ParkAddTimeActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/activity/user/MyBagActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/util/DataFormatUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
