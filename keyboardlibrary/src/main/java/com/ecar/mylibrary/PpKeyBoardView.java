@@ -164,7 +164,12 @@ public class PpKeyBoardView extends KeyboardView {
         paint.setAntiAlias(true);
         // paint.setTypeface(Typeface.DEFAULT_BOLD);
         paint.setColor(Color.BLACK);
-        if (keybordType == KeyboardUtil.INPUTTYPE_NUM) {
+        if (keybordType == KeyboardUtil.INPUTTYPE_NUM ||
+                keybordType == KeyboardUtil.INPUTTYPE_NUM_FINISH ||
+                keybordType == KeyboardUtil.INPUTTYPE_NUM_NEXT ||
+                keybordType == KeyboardUtil.INPUTTYPE_NUM_POINT ||
+                keybordType == KeyboardUtil.INPUTTYPE_NUM_ABC ||
+                keybordType == KeyboardUtil.INPUTTYPE_NUM_X) {
             if (key.label != null) {
                 paint.getTextBounds(key.label.toString(), 0, key.label.toString()
                         .length(), bounds);

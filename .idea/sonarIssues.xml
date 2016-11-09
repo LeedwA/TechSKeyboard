@@ -488,7 +488,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/layout/fragment_near.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/layout/fragment_park.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/layout/include_near_park_none_data.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/values/colors.xml">
           <value>
             <set />
           </value>
@@ -544,6 +559,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/util/DataFormatUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/view/MainRelativeLayoutEx.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/view/stickylayout/StickyLayout.java">
           <value>
             <set />
           </value>
