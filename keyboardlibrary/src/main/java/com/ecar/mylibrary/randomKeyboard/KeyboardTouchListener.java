@@ -1,20 +1,20 @@
-package com.ecar.mylibrary;
+package com.ecar.mylibrary.randomKeyboard;
 
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
-import static android.R.id.keyboardView;
+import com.ecar.mylibrary.randomKeyboard.RandomKeyboardUtil;
 
 /**
  * Created by xuanweijian on 2016/3/31.
  */
 public class KeyboardTouchListener implements View.OnTouchListener {
-    private KeyboardUtil keyboardUtil;
+    private RandomKeyboardUtil keyboardUtil;
     private int keyboardType = 1;
     private int scrollTo = -1;
 
-    public KeyboardTouchListener(KeyboardUtil util,int keyboardType,int scrollTo){
+    public KeyboardTouchListener(RandomKeyboardUtil util, int keyboardType, int scrollTo){
         this.keyboardUtil = util;
         this.keyboardType = keyboardType;
         this.scrollTo = scrollTo;

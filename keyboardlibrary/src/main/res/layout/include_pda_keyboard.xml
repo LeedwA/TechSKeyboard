@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.inputmethodservice.KeyboardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/KeyboardView_style"
+    android:visibility="gone" />

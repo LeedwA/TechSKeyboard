@@ -4,10 +4,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-         <android.support.v4.view.ViewPager
-             android:id="@+id/viewPager"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/llay_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/tv_random"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginRight="1dp"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:onClick="random"
+            android:text="随机键盘"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/tv_pda"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/green"
+            android:gravity="center"
+            android:onClick="pdakey"
+            android:text="PDA键盘"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/tv_carnum"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/color_glay1"
+            android:gravity="center"
+            android:onClick="appkey"
+            android:text="app车牌键盘"
+            android:textColor="@color/black" />
+    </LinearLayout>
 
 
 </RelativeLayout>

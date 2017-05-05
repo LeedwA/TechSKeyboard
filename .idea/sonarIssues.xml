@@ -483,6 +483,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/drawable/shape_main_color_bg.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/drawable/shape_main_parking_text_color_bg.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/layout/activity_mybag.xml">
           <value>
             <set />
@@ -503,7 +513,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/layout/item_explist_child_mybag.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/layout/item_explist_group.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/values/colors.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/res/values/dimens.xml">
           <value>
             <set />
           </value>
@@ -558,12 +583,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/util/AppUiUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/util/DataFormatUtil.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/view/MainRelativeLayoutEx.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../shenzhen_ui/sz_parkfee/src/com/szchmtech/parkingfee/view/TextViewParking.java">
           <value>
             <set />
           </value>

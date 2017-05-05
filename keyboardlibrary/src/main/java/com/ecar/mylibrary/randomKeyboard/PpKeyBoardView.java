@@ -1,4 +1,4 @@
-package com.ecar.mylibrary;
+package com.ecar.mylibrary.randomKeyboard;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -6,10 +6,12 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.Keyboard.Key;
 import android.inputmethodservice.KeyboardView;
 import android.util.AttributeSet;
+
+import com.ecar.mylibrary.R;
+import com.ecar.mylibrary.randomKeyboard.RandomKeyboardUtil;
 
 import java.util.ArrayList;
 
@@ -48,17 +50,17 @@ public class PpKeyBoardView extends KeyboardView {
 
         for (Key key : keys) {
             // 数字键盘的处理
-            if (keybordType == KeyboardUtil.INPUTTYPE_NUM ||
-                    keybordType == KeyboardUtil.INPUTTYPE_NUM_FINISH ||
-                    keybordType == KeyboardUtil.INPUTTYPE_NUM_NEXT ||
-                    keybordType == KeyboardUtil.INPUTTYPE_NUM_POINT ||
-                    keybordType == KeyboardUtil.INPUTTYPE_NUM_ABC ||
-                    keybordType == KeyboardUtil.INPUTTYPE_NUM_X) {
+            if (keybordType == RandomKeyboardUtil.INPUTTYPE_NUM ||
+                    keybordType == RandomKeyboardUtil.INPUTTYPE_NUM_FINISH ||
+                    keybordType == RandomKeyboardUtil.INPUTTYPE_NUM_NEXT ||
+                    keybordType == RandomKeyboardUtil.INPUTTYPE_NUM_POINT ||
+                    keybordType == RandomKeyboardUtil.INPUTTYPE_NUM_ABC ||
+                    keybordType == RandomKeyboardUtil.INPUTTYPE_NUM_X) {
                 initRightType(key);
                 drawNumSpecialKey(key, canvas);
-            } else if (keybordType == KeyboardUtil.INPUTTYPE_ABC) {
+            } else if (keybordType == RandomKeyboardUtil.INPUTTYPE_ABC) {
                 drawABCSpecialKey(key, canvas);
-            } else if (keybordType == KeyboardUtil.INPUTTYPE_SYMBOL) {
+            } else if (keybordType == RandomKeyboardUtil.INPUTTYPE_SYMBOL) {
                 drawSymbolSpecialKey(key, canvas);
             }
         }
@@ -164,12 +166,12 @@ public class PpKeyBoardView extends KeyboardView {
         paint.setAntiAlias(true);
         // paint.setTypeface(Typeface.DEFAULT_BOLD);
         paint.setColor(Color.BLACK);
-        if (keybordType == KeyboardUtil.INPUTTYPE_NUM ||
-                keybordType == KeyboardUtil.INPUTTYPE_NUM_FINISH ||
-                keybordType == KeyboardUtil.INPUTTYPE_NUM_NEXT ||
-                keybordType == KeyboardUtil.INPUTTYPE_NUM_POINT ||
-                keybordType == KeyboardUtil.INPUTTYPE_NUM_ABC ||
-                keybordType == KeyboardUtil.INPUTTYPE_NUM_X) {
+        if (keybordType == RandomKeyboardUtil.INPUTTYPE_NUM ||
+                keybordType == RandomKeyboardUtil.INPUTTYPE_NUM_FINISH ||
+                keybordType == RandomKeyboardUtil.INPUTTYPE_NUM_NEXT ||
+                keybordType == RandomKeyboardUtil.INPUTTYPE_NUM_POINT ||
+                keybordType == RandomKeyboardUtil.INPUTTYPE_NUM_ABC ||
+                keybordType == RandomKeyboardUtil.INPUTTYPE_NUM_X) {
             if (key.label != null) {
                 paint.getTextBounds(key.label.toString(), 0, key.label.toString()
                         .length(), bounds);
@@ -186,7 +188,7 @@ public class PpKeyBoardView extends KeyboardView {
                         * key.height));
                 key.icon.draw(canvas);
             }
-        } else if (keybordType == KeyboardUtil.INPUTTYPE_ABC) {
+        } else if (keybordType == RandomKeyboardUtil.INPUTTYPE_ABC) {
             if (key.label != null) {
                 paint.setColor(mContext.getResources().getColor(R.color.color_3c3c3c));
                 paint.getTextBounds(key.label.toString(), 0, key.label.toString()
@@ -194,7 +196,7 @@ public class PpKeyBoardView extends KeyboardView {
                 canvas.drawText(key.label.toString(), key.x + (key.width / 2),
                         (key.y + key.height / 2) + bounds.height() / 2, paint);
             }
-        } else if (keybordType == KeyboardUtil.INPUTTYPE_SYMBOL) {
+        } else if (keybordType == RandomKeyboardUtil.INPUTTYPE_SYMBOL) {
             paint.setColor(mContext.getResources().getColor(R.color.color_3c3c3c));
             paint.getTextBounds(key.label.toString(), 0, key.label.toString()
                     .length(), bounds);

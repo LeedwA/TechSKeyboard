@@ -17,6 +17,19 @@
     <color name="color_glay2">#F6F6F6</color>
     <color name="color_glay3">#F2F2F2</color>
 
+    <!--键盘背景颜色-->
+    <color name="keyboard_bg">#E1E4E9</color>
+    <color name="text_black">#4e4e4e</color>
+    <color name="white">#ffffff</color>
+    <color name="click_grey">#d8d8d8</color>
+    <color name="gery">#919191</color>
+    <!--橙色-->
+    <color name="orange">#F76809</color>
+    <!--亮灰色-->
+    <color name="bright_gray">#EcEcEc</color>
+
+
+
 
 
 

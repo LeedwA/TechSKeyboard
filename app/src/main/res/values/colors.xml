@@ -3,4 +3,25 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="orange">#f89636</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#43B7FF</color>
+    <color name="green">#A5CD4E</color>
+    <color name="gray">#ff789089</color>
+    <color name="black">#000000</color>
+    <color name="glay_line">#F2F2F2</color>
+    <color name="red_p">#E20C0C</color>
+    <!--<color name="red_press">#E20E03</color>-->
+    <!--<color name="red_n">#B40B02</color>-->
+    <color name="light_white">#c8ffffff</color>
+    <color name="window_bg">#ffeef1f3</color>
+    <color name="transparent">#00000000</color>
+    <color name="background_layout">#ff405896</color>
+    <color name="weizhang_luduan_text">#ff4880ae</color>
+    <color name="dimgray">#ff696969</color>
+    <color name="mainbg">#ff3b77a9</color>
+    <color name="contentbg">#f8f8f8</color>
+    <color name="glay1">#E4E4E4</color>
+    <color name="mainbg_light">#ff4599e0</color>
 </resources>

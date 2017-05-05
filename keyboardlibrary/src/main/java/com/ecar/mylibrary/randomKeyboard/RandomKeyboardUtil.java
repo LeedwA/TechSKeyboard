@@ -1,7 +1,6 @@
-package com.ecar.mylibrary;
+package com.ecar.mylibrary.randomKeyboard;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.Keyboard.Key;
@@ -24,6 +23,8 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.ecar.mylibrary.R;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -33,7 +34,7 @@ import java.util.Random;
 import java.util.regex.Pattern;
 
 
-public class KeyboardUtil {
+public class RandomKeyboardUtil {
 
     private Context mContext;
     private int widthPixels;
@@ -84,7 +85,7 @@ public class KeyboardUtil {
      * @param ctx
      * @param rootView rootView 需要是LinearLayout,以适应键盘
      */
-    public KeyboardUtil(Context ctx, LinearLayout rootView, ScrollView scrollView) {
+    public RandomKeyboardUtil(Context ctx, LinearLayout rootView, ScrollView scrollView) {
         this.mContext = ctx;
         widthPixels = mContext.getResources().getDisplayMetrics().widthPixels;
         initKeyBoardView(rootView);
@@ -97,7 +98,7 @@ public class KeyboardUtil {
      * @param ctx
      * @param rootView rootView 需要是LinearLayout,以适应键盘
      */
-    public KeyboardUtil(Context ctx, RelativeLayout rootView, ScrollView scrollView) {
+    public RandomKeyboardUtil(Context ctx, RelativeLayout rootView, ScrollView scrollView) {
         this.mContext = ctx;
 
         widthPixels = mContext.getResources().getDisplayMetrics().widthPixels;
@@ -105,7 +106,7 @@ public class KeyboardUtil {
         initScrollHandler(rootView, scrollView);
     }
 
-    public KeyboardUtil setRandom(boolean random) {
+    public RandomKeyboardUtil setRandom(boolean random) {
         this.isRandom = random;
         return this;
     }
@@ -115,13 +116,13 @@ public class KeyboardUtil {
      *
      * @param view 是弹框的inflaterView
      */
-    public KeyboardUtil(View view, Context ctx, LinearLayout root_View, ScrollView scrollView) {
+    public RandomKeyboardUtil(View view, Context ctx, LinearLayout root_View, ScrollView scrollView) {
         this(ctx, root_View, scrollView);
         this.inflaterView = view;
     }
 
     //设置监听事件
-    public KeyboardUtil setInputOverListener(InputFinishListener listener) {
+    public RandomKeyboardUtil setInputOverListener(InputFinishListener listener) {
         this.inputOver = listener;
         return this;
 
@@ -139,7 +140,7 @@ public class KeyboardUtil {
         rootView.addView(keyBoardLayout);
 
         if (keyBoardLayout != null && keyBoardLayout.getVisibility() == View.VISIBLE)
-            Log.d("KeyboardUtil", "visible");
+            Log.d("RandomKeyboardUtil", "visible");
     }
 
     private void initKeyBoardView(RelativeLayout rootView) {
@@ -154,7 +155,7 @@ public class KeyboardUtil {
         rootView.addView(keyBoardLayout, params);
 
         if (keyBoardLayout != null && keyBoardLayout.getVisibility() == View.VISIBLE)
-            Log.d("KeyboardUtil", "visible");
+            Log.d("RandomKeyboardUtil", "visible");
     }
 
     public void initLayoutHeight(LinearLayout layoutView) {
@@ -187,7 +188,7 @@ public class KeyboardUtil {
 
 
     //完成键事件
-    public KeyboardUtil doneOnclick(View.OnClickListener onClickListener) {
+    public RandomKeyboardUtil doneOnclick(View.OnClickListener onClickListener) {
         keyboard_view_finish.setOnClickListener(onClickListener);
         return this;
     }
@@ -313,7 +314,7 @@ public class KeyboardUtil {
     }
 
     //设置一些不需要使用这个键盘的edittext,解决切换问题
-    public KeyboardUtil setOtherEdittext(EditText... edittexts) {
+    public RandomKeyboardUtil setOtherEdittext(EditText... edittexts) {
         for (EditText editText : edittexts) {
             editText.setOnTouchListener(new View.OnTouchListener() {
                 @Override
@@ -379,7 +380,7 @@ public class KeyboardUtil {
 
         @Override
         public void onRelease(int primaryCode) {
-            if (inputType != KeyboardUtil.INPUTTYPE_NUM_ABC
+            if (inputType != RandomKeyboardUtil.INPUTTYPE_NUM_ABC
                     && (primaryCode == Keyboard.KEYCODE_SHIFT)) {
                 keyboardView.setPreviewEnabled(true);
             }
@@ -387,12 +388,12 @@ public class KeyboardUtil {
 
         @Override
         public void onPress(int primaryCode) {
-            if (inputType == KeyboardUtil.INPUTTYPE_NUM_ABC ||
-                    inputType == KeyboardUtil.INPUTTYPE_NUM ||
-                    inputType == KeyboardUtil.INPUTTYPE_NUM_POINT ||
-                    inputType == KeyboardUtil.INPUTTYPE_NUM_FINISH ||
-                    inputType == KeyboardUtil.INPUTTYPE_NUM_NEXT ||
-                    inputType == KeyboardUtil.INPUTTYPE_NUM_X) {
+            if (inputType == RandomKeyboardUtil.INPUTTYPE_NUM_ABC ||
+                    inputType == RandomKeyboardUtil.INPUTTYPE_NUM ||
+                    inputType == RandomKeyboardUtil.INPUTTYPE_NUM_POINT ||
+                    inputType == RandomKeyboardUtil.INPUTTYPE_NUM_FINISH ||
+                    inputType == RandomKeyboardUtil.INPUTTYPE_NUM_NEXT ||
+                    inputType == RandomKeyboardUtil.INPUTTYPE_NUM_X) {
                 keyboardView.setPreviewEnabled(false);
                 return;
             }
@@ -613,7 +614,7 @@ public class KeyboardUtil {
         this.scrollTo = scrollTo;
         //TODO
         if (keyBoardLayout != null && keyBoardLayout.getVisibility() == View.VISIBLE)
-            Log.d("KeyboardUtil", "visible");
+            Log.d("RandomKeyboardUtil", "visible");
 
         if (setKeyBoardCursorNew(editText)) {
             showHandler = new Handler();
@@ -677,12 +678,12 @@ public class KeyboardUtil {
         void KeyBoardStateChange(int state, EditText editText);
     }
 
-    public KeyboardUtil setKeyBoardStateChangeListener(KeyBoardStateChangeListener listener) {
+    public RandomKeyboardUtil setKeyBoardStateChangeListener(KeyBoardStateChangeListener listener) {
         this.keyBoardStateChangeListener = listener;
         return this;
     }
 
-    public KeyboardUtil setEidtOntouth(KeyboardTouchListener keyboardTouchListener, EditText edit) {
+    public RandomKeyboardUtil setEidtOntouth(KeyboardTouchListener keyboardTouchListener, EditText edit) {
         if (edit != null) {
             edit.setOnTouchListener(keyboardTouchListener);
         }
@@ -832,7 +833,6 @@ public class KeyboardUtil {
         public void setLable(String lable) {
             this.lable = lable;
         }
-
 
     }
 }
