@@ -158,6 +158,10 @@ public class PdaKeyboardNumUtil {
         }
     }
 
+    public boolean isKeyboardShown() {
+        return keyboardView.getVisibility() == View.VISIBLE;
+    }
+
     public void hideKeyboard() {
         K_Util.hideKeyboard(context, ed);
         int visibility = keyboardView.getVisibility();
