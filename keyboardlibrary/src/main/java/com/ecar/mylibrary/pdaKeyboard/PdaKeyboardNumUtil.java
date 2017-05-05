@@ -165,11 +165,12 @@ public class PdaKeyboardNumUtil {
     };
 
     public void showKeyboard() {
-        K_Util.hideKeyboard(context, ed);
         int visibility = keyboardView.getVisibility();
         if (visibility == View.GONE || visibility == View.INVISIBLE) {
             keyboardView.setVisibility(View.VISIBLE);
         }
+        K_Util.hideKeyboard(context, ed);
+
     }
 
     public boolean isKeyboardShown() {
@@ -177,11 +178,12 @@ public class PdaKeyboardNumUtil {
     }
 
     public void hideKeyboard() {
-        K_Util.hideKeyboard(context, ed);
         int visibility = keyboardView.getVisibility();
         if (visibility == View.VISIBLE) {
             keyboardView.setVisibility(View.GONE);
         }
+        K_Util.hideKeyboard(context, ed);
+
     }
 
     private boolean isword(String str) {
