@@ -63,6 +63,7 @@ public class PdaKeyboardActivity extends Activity {
 
             }
         },false);
+        normal_ed1.setText("99999999");
     }
 
 }

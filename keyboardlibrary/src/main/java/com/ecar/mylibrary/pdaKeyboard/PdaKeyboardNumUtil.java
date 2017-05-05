@@ -76,6 +76,7 @@ public class PdaKeyboardNumUtil {
                         showKeyboard();
                     } else {
                         isFirst = false;
+                        hideKeyboard();
                     }
                 } else {
                     hideKeyboard();
