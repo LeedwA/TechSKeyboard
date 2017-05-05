@@ -32,6 +32,7 @@ public class PdaKeyboardNumUtil {
     Activity context;
     private EditText ed;
     private SlideView mSlideView;
+    private boolean isFirst;
 
 
     public PdaKeyboardNumUtil(KeyboardView keyboardView, Activity ctx, EditText edit) {
@@ -43,11 +44,19 @@ public class PdaKeyboardNumUtil {
         mSlideView = slideView;
     }
 
+    //isFirstOpenKeyboard true:首次获取焦点打开键盘 false：不打开
+    public PdaKeyboardNumUtil(KeyboardView keyboardView, Activity ctx, EditText edit, SlideView slideView,boolean isFirstOpenKeyboard) {
+        isFirst=!isFirstOpenKeyboard;
+        initKeyboard(ctx, edit, keyboardView);
+        mSlideView = slideView;
+    }
+
     public PdaKeyboardNumUtil(Activity ctx, EditText edit, KeyboardView keyboardView) {
         initKeyboard(ctx, edit, keyboardView);
     }
 
     private void initKeyboard(Activity ctx, EditText edit, KeyboardView keyboardView) {
+        isFirst = true;
         this.context = ctx;
         this.ed = edit;
         kNum = new Keyboard(ctx, R.xml.number_keyboard);
@@ -63,7 +72,11 @@ public class PdaKeyboardNumUtil {
             @Override
             public void onFocusChange(View view, boolean b) {
                 if (b) {
-                    showKeyboard();
+                    if (!isFirst) {
+                        showKeyboard();
+                    } else {
+                        isFirst = false;
+                    }
                 } else {
                     hideKeyboard();
                 }

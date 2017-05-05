@@ -62,7 +62,7 @@ public class PdaKeyboardActivity extends Activity {
             public void hideView() {
 
             }
-        });
+        },false);
     }
 
 }
