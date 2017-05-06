@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.text.Editable;
+import android.text.InputType;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
@@ -55,7 +57,7 @@ public class PdaKeyboardNumUtil {
         initKeyboard(ctx, edit, keyboardView);
     }
 
-    private void initKeyboard(Activity ctx, EditText edit, KeyboardView keyboardView) {
+    private void initKeyboard(final Activity ctx, EditText edit, KeyboardView keyboardView) {
         isFirst = true;
         this.context = ctx;
         this.ed = edit;
@@ -67,28 +69,45 @@ public class PdaKeyboardNumUtil {
         keyboardView.setEnabled(true);
         keyboardView.setPreviewEnabled(true);
         keyboardView.setOnKeyboardActionListener(listener);
-
-        ed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        ed.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onFocusChange(View view, boolean b) {
-                if (b) {
-                    if (!isFirst) {
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        break;
+                    case MotionEvent.ACTION_UP:
                         showKeyboard();
-                    } else {
-                        isFirst = false;
-                        hideKeyboard();
-                    }
-                } else {
-                    hideKeyboard();
+                        K_Util.setKeyBoardCursorNew(ctx,ed);
+                        break;
+                    default:
+                        break;
                 }
+                return false;
             }
         });
-        ed.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showKeyboard();
-            }
-        });
+
+
+//        ed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View view, boolean b) {
+//                if (b) {
+//                    if (!isFirst) {
+//                        showKeyboard();
+//                    } else {
+//                        isFirst = false;
+//                        hideKeyboard();
+//                    }
+//                } else {
+//                    hideKeyboard();
+//                }
+//            }
+//        });
+//        ed.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showKeyboard();
+//            }
+//        });
     }
 
     private KeyboardView.OnKeyboardActionListener listener = new KeyboardView.OnKeyboardActionListener() {

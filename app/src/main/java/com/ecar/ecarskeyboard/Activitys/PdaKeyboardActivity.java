@@ -1,13 +1,17 @@
 package com.ecar.ecarskeyboard.Activitys;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.inputmethodservice.KeyboardView;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -16,6 +20,9 @@ import com.ecar.mylibrary.pdaKeyboard.PdaKeyboardCityUtil;
 import com.ecar.mylibrary.pdaKeyboard.PdaKeyboardNumUtil;
 import com.ecar.mylibrary.pdaKeyboard.view.CityPopupWindow;
 import com.ecar.mylibrary.util.K_Util;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import static com.orhanobut.logger.Logger.init;
 
@@ -39,7 +46,6 @@ public class PdaKeyboardActivity extends Activity {
     }
 
 
-
     private void initView() {
         //城市选择键盘
         normal_ed0 = (TextView) findViewById(R.id.normal_ed0);
@@ -56,14 +62,16 @@ public class PdaKeyboardActivity extends Activity {
         });
         //车牌号选择键盘
         KeyboardView keyboardView = (KeyboardView) findViewById(R.id.view_kbview);
-        EditText normal_ed1 = (EditText) findViewById(R.id.normal_ed1);
+        final EditText normal_ed1 = (EditText) findViewById(R.id.normal_ed1);
         pdaKeyboardUtil = new PdaKeyboardNumUtil(keyboardView, this, normal_ed1, new PdaKeyboardNumUtil.SlideView() {
             @Override
             public void hideView() {
 
             }
-        },false);
+        }, false);
+
         normal_ed1.setText("99999999");
+
     }
 
 }
