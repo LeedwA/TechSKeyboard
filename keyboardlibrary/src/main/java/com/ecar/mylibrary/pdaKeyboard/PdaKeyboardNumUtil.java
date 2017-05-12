@@ -4,13 +4,12 @@ import android.app.Activity;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.text.Editable;
-import android.text.InputType;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
-import com.ecar.mylibrary.util.K_Util;
 import com.ecar.mylibrary.R;
+import com.ecar.mylibrary.util.K_Util;
 
 
 /**
@@ -29,12 +28,11 @@ public class PdaKeyboardNumUtil {
     private Keyboard kNum;// 数字键盘
     private Keyboard kLetter1;// 字母键盘1
     private Keyboard kLetter2;// 字母键盘2
-    public boolean isnun = false;// 是否数据键盘
-    public boolean isupper = false;// 是否大写
-    Activity context;
+    public boolean isnun;// 是否数据键盘
+    public Activity activity;
+    public boolean isUpper = true;// 是否大写
     private EditText ed;
     private SlideView mSlideView;
-    private boolean isFirst;
 
 
     public PdaKeyboardNumUtil(KeyboardView keyboardView, Activity ctx, EditText edit) {
@@ -46,20 +44,12 @@ public class PdaKeyboardNumUtil {
         mSlideView = slideView;
     }
 
-    //isFirstOpenKeyboard true:首次获取焦点打开键盘 false：不打开
-    public PdaKeyboardNumUtil(KeyboardView keyboardView, Activity ctx, EditText edit, SlideView slideView,boolean isFirstOpenKeyboard) {
-        isFirst=!isFirstOpenKeyboard;
-        initKeyboard(ctx, edit, keyboardView);
-        mSlideView = slideView;
-    }
-
     public PdaKeyboardNumUtil(Activity ctx, EditText edit, KeyboardView keyboardView) {
         initKeyboard(ctx, edit, keyboardView);
     }
 
     private void initKeyboard(final Activity ctx, EditText edit, KeyboardView keyboardView) {
-        isFirst = true;
-        this.context = ctx;
+        this.activity = ctx;
         this.ed = edit;
         kNum = new Keyboard(ctx, R.xml.number_keyboard);
         kLetter1 = new Keyboard(ctx, R.xml.letter_keyboard_1);
@@ -77,7 +67,7 @@ public class PdaKeyboardNumUtil {
                         break;
                     case MotionEvent.ACTION_UP:
                         showKeyboard();
-                        K_Util.setKeyBoardCursorNew(ctx,ed);
+                        K_Util.setKeyBoardCursorNew(ctx, ed);
                         break;
                     default:
                         break;
@@ -86,31 +76,10 @@ public class PdaKeyboardNumUtil {
             }
         });
 
-
-//        ed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View view, boolean b) {
-//                if (b) {
-//                    if (!isFirst) {
-//                        showKeyboard();
-//                    } else {
-//                        isFirst = false;
-//                        hideKeyboard();
-//                    }
-//                } else {
-//                    hideKeyboard();
-//                }
-//            }
-//        });
-//        ed.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                showKeyboard();
-//            }
-//        });
     }
 
     private KeyboardView.OnKeyboardActionListener listener = new KeyboardView.OnKeyboardActionListener() {
+
         @Override
         public void swipeUp() {
         }
@@ -178,18 +147,30 @@ public class PdaKeyboardNumUtil {
                     ed.setSelection(start + 1);
                 }
             } else {
-                editable.insert(start, Character.toString((char) primaryCode));
+                String text = Character.toString((char) primaryCode);
+                editable.insert(start, isUpper ? text.toUpperCase() : text);
             }
         }
     };
+
+    //是否大写  true大写
+    public PdaKeyboardNumUtil setUpper(boolean upper) {
+        this.isUpper = upper;
+        return this;
+    }
+
+    //重置键盘（设为字母首页）
+    public void resetKeyboard() {
+        keyboardView.setKeyboard(kLetter1);
+        isnun = false;
+    }
 
     public void showKeyboard() {
         int visibility = keyboardView.getVisibility();
         if (visibility == View.GONE || visibility == View.INVISIBLE) {
             keyboardView.setVisibility(View.VISIBLE);
         }
-        K_Util.hideKeyboard(context, ed);
-
+        K_Util.hideKeyboard(activity, ed);
     }
 
     public boolean isKeyboardShown() {
@@ -201,7 +182,7 @@ public class PdaKeyboardNumUtil {
         if (visibility == View.VISIBLE) {
             keyboardView.setVisibility(View.GONE);
         }
-        K_Util.hideKeyboard(context, ed);
+        K_Util.hideKeyboard(activity, ed);
 
     }
 
@@ -212,6 +193,7 @@ public class PdaKeyboardNumUtil {
         }
         return false;
     }
+
 
     public interface SlideView {
         void hideView();

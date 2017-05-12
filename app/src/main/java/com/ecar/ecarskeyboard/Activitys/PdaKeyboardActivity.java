@@ -1,17 +1,11 @@
 package com.ecar.ecarskeyboard.Activitys;
 
 import android.app.Activity;
-import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
 import android.inputmethodservice.KeyboardView;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.text.InputType;
 import android.text.TextUtils;
-import android.view.Gravity;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -19,12 +13,6 @@ import com.ecar.ecarskeyboard.R;
 import com.ecar.mylibrary.pdaKeyboard.PdaKeyboardCityUtil;
 import com.ecar.mylibrary.pdaKeyboard.PdaKeyboardNumUtil;
 import com.ecar.mylibrary.pdaKeyboard.view.CityPopupWindow;
-import com.ecar.mylibrary.util.K_Util;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
-import static com.orhanobut.logger.Logger.init;
 
 /*************************************
  功能： pda输入键盘
@@ -68,10 +56,15 @@ public class PdaKeyboardActivity extends Activity {
             public void hideView() {
 
             }
-        }, false);
+        }).setUpper(true);//转为大写
 
         normal_ed1.setText("99999999");
 
+    }
+
+
+    public void reSet(View view) {
+        pdaKeyboardUtil.resetKeyboard();
     }
 
 }

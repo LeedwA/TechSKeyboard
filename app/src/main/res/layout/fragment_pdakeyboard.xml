@@ -7,25 +7,34 @@
 
 
     <TextView
-        android:paddingTop="12dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="50dp"
         android:id="@+id/normal_ed0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="粤" />
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="120dp"
+        android:hint="粤"
+        android:paddingTop="12dp" />
+
     <EditText
-        android:layout_alignTop="@id/normal_ed0"
-        android:layout_toRightOf="@id/normal_ed0"
         android:id="@+id/normal_ed1"
-        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@id/normal_ed0"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/normal_ed0"
         android:hint="B8888888" />
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/normal_ed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="reSet"
+        android:text="重置" />
 
     <include
         android:id="@+id/view_kbview"
-        layout="@layout/include_pda_keyboard"/>
+        layout="@layout/include_pda_keyboard" />
 
 
 </RelativeLayout>
