@@ -58,13 +58,27 @@ public class PdaKeyboardActivity extends Activity {
             }
         }).setUpper(true);//转为大写
 
-        normal_ed1.setText("99999999");
 
     }
 
 
     public void reSet(View view) {
         pdaKeyboardUtil.resetKeyboard();
+    }
+
+    boolean isEnable;
+
+    public void noneEnable(View view) {
+        pdaKeyboardUtil.setEnable(isEnable);
+        pdaKeyboardUtil.clearFocus();
+        isEnable = !isEnable;
+    }
+
+    boolean isShow;
+
+    public void showHide(View view) {
+        pdaKeyboardUtil.showEdit(isShow);
+        isShow = !isShow;
     }
 
 }

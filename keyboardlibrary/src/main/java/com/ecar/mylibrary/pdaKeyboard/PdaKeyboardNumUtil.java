@@ -28,12 +28,15 @@ public class PdaKeyboardNumUtil {
     private Keyboard kNum;// 数字键盘
     private Keyboard kLetter1;// 字母键盘1
     private Keyboard kLetter2;// 字母键盘2
-    public boolean isnun;// 是否数据键盘
+
     public Activity activity;
+
+    public boolean isnun;// 是否数据键盘
     public boolean isUpper = true;// 是否大写
+    public boolean isEnable = true;// 是否启用
+
     private EditText ed;
     private SlideView mSlideView;
-
 
     public PdaKeyboardNumUtil(KeyboardView keyboardView, Activity ctx, EditText edit) {
         initKeyboard(ctx, edit, keyboardView);
@@ -62,21 +65,24 @@ public class PdaKeyboardNumUtil {
         ed.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        showKeyboard();
-                        K_Util.setKeyBoardCursorNew(ctx, ed);
-                        break;
-                    default:
-                        break;
+                if (isEnable) {
+                    switch (motionEvent.getAction()) {
+                        case MotionEvent.ACTION_DOWN:
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            showKeyboard();
+                            K_Util.setKeyBoardCursorNew(ctx, ed);
+                            break;
+                        default:
+                            break;
+                    }
                 }
                 return false;
             }
         });
 
     }
+
 
     private KeyboardView.OnKeyboardActionListener listener = new KeyboardView.OnKeyboardActionListener() {
 
@@ -159,10 +165,29 @@ public class PdaKeyboardNumUtil {
         return this;
     }
 
+    //判断是否启用  enable true 启用
+    public void setEnable(boolean enable) {
+        isEnable = enable;
+        hideKeyboard();
+    }
+
+    //清空输入框内容
+    public void clearFocus() {
+        this.ed.setText("");
+        this.ed.clearFocus();
+        this.ed.setSelected(false);
+    }
+    //隐藏/显示输入框  isShow true显示
+    public void showEdit(boolean isShow) {
+        this.ed.setVisibility(isShow?View.VISIBLE:View.INVISIBLE);
+    }
+
+
     //重置键盘（设为字母首页）
     public void resetKeyboard() {
         keyboardView.setKeyboard(kLetter1);
         isnun = false;
+        isEnable = true;
     }
 
     public void showKeyboard() {
