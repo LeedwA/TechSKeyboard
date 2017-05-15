@@ -1,5 +1,6 @@
 package com.ecar.mylibrary.pdaKeyboard;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
@@ -172,22 +173,30 @@ public class PdaKeyboardNumUtil {
     }
 
     //清空输入框内容
+    @SuppressLint("NewApi")
     public void clearFocus() {
         this.ed.setText("");
         this.ed.clearFocus();
         this.ed.setSelected(false);
+        this.ed.setShowSoftInputOnFocus(false);
+        this.ed.setClickable(false);
+
     }
+
     //隐藏/显示输入框  isShow true显示
     public void showEdit(boolean isShow) {
-        this.ed.setVisibility(isShow?View.VISIBLE:View.INVISIBLE);
+        this.ed.setVisibility(isShow ? View.VISIBLE : View.INVISIBLE);
     }
 
 
     //重置键盘（设为字母首页）
+    @SuppressLint("NewApi")
     public void resetKeyboard() {
         keyboardView.setKeyboard(kLetter1);
         isnun = false;
         isEnable = true;
+        this.ed.setFocusable(true);
+        this.ed.setClickable(true);
     }
 
     public void showKeyboard() {

@@ -72,6 +72,7 @@ public class PdaKeyboardActivity extends Activity {
         pdaKeyboardUtil.setEnable(isEnable);
         pdaKeyboardUtil.clearFocus();
         isEnable = !isEnable;
+        ((TextView)view).setText(isEnable?"启用":"禁用");
     }
 
     boolean isShow;
@@ -79,6 +80,8 @@ public class PdaKeyboardActivity extends Activity {
     public void showHide(View view) {
         pdaKeyboardUtil.showEdit(isShow);
         isShow = !isShow;
+        ((TextView)view).setText(isShow?"显示":"隐藏");
+
     }
 
 }
