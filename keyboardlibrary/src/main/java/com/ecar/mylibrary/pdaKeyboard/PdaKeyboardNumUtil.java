@@ -180,6 +180,8 @@ public class PdaKeyboardNumUtil {
         this.ed.setSelected(false);
         this.ed.setShowSoftInputOnFocus(false);
         this.ed.setClickable(false);
+        this.ed.setFocusable(false);
+
 
     }
 
@@ -197,6 +199,9 @@ public class PdaKeyboardNumUtil {
         isEnable = true;
         this.ed.setFocusable(true);
         this.ed.setClickable(true);
+        this.ed.setFocusable(true);
+        this.ed.setFocusableInTouchMode(true);
+        this.ed.requestFocus();
     }
 
     public void showKeyboard() {
