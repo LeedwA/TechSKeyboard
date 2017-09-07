@@ -1,4 +1,4 @@
-package com.ecar.mylibrary.pdaKeyboard;
+package com.ecar.skeyboard.pdaKeyboard;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -9,8 +9,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
-import com.ecar.mylibrary.R;
-import com.ecar.mylibrary.util.K_Util;
+import com.ecar.skeyboard.R;
+import com.ecar.skeyboard.util.K_Util;
 
 
 /**

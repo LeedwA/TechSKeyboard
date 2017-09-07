@@ -1,4 +1,4 @@
-package com.ecar.mylibrary;
+package com.ecar.skeyboard;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ecar.mylibrary">
+    package="com.ecar.skeyboard">
 
     <application
         android:allowBackup="true"

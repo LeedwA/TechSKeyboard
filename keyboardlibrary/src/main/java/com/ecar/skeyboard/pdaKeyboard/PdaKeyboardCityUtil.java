@@ -1,14 +1,12 @@
-package com.ecar.mylibrary.pdaKeyboard;
+package com.ecar.skeyboard.pdaKeyboard;
 
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.ecar.mylibrary.pdaKeyboard.view.CityPopupWindow;
-import com.ecar.mylibrary.util.K_Util;
+import com.ecar.skeyboard.pdaKeyboard.view.CityPopupWindow;
 
 /*************************************
  功能：

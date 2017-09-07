@@ -1,4 +1,4 @@
-package com.ecar.mylibrary.util;
+package com.ecar.skeyboard.util;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
-import static android.R.id.edit;
 
 /*************************************
  功能：

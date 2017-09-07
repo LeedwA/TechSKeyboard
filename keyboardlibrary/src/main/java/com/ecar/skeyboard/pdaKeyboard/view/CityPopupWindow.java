@@ -1,4 +1,4 @@
-package com.ecar.mylibrary.pdaKeyboard.view;
+package com.ecar.skeyboard.pdaKeyboard.view;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
@@ -9,7 +9,7 @@ import android.widget.GridView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.ecar.mylibrary.R;
+import com.ecar.skeyboard.R;
 
 
 /**

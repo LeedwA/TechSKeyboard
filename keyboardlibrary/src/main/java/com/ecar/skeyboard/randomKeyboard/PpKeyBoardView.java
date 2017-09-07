@@ -1,4 +1,4 @@
-package com.ecar.mylibrary.randomKeyboard;
+package com.ecar.skeyboard.randomKeyboard;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -10,8 +10,7 @@ import android.inputmethodservice.Keyboard.Key;
 import android.inputmethodservice.KeyboardView;
 import android.util.AttributeSet;
 
-import com.ecar.mylibrary.R;
-import com.ecar.mylibrary.randomKeyboard.RandomKeyboardUtil;
+import com.ecar.skeyboard.R;
 
 import java.util.ArrayList;
 

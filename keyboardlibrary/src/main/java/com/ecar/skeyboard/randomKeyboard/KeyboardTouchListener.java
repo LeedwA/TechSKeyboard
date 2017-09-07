@@ -1,10 +1,8 @@
-package com.ecar.mylibrary.randomKeyboard;
+package com.ecar.skeyboard.randomKeyboard;
 
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
-
-import com.ecar.mylibrary.randomKeyboard.RandomKeyboardUtil;
 
 /**
  * Created by xuanweijian on 2016/3/31.

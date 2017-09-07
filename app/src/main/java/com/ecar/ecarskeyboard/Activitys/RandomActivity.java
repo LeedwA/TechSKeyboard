@@ -10,8 +10,8 @@ import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.ecar.ecarskeyboard.R;
-import com.ecar.mylibrary.randomKeyboard.KeyboardTouchListener;
-import com.ecar.mylibrary.randomKeyboard.RandomKeyboardUtil;
+import com.ecar.skeyboard.randomKeyboard.KeyboardTouchListener;
+import com.ecar.skeyboard.randomKeyboard.RandomKeyboardUtil;
 
 /*************************************
  功能：  随机输入键盘

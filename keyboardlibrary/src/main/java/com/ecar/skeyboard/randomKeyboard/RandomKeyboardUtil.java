@@ -1,4 +1,4 @@
-package com.ecar.mylibrary.randomKeyboard;
+package com.ecar.skeyboard.randomKeyboard;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -23,7 +23,7 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.ecar.mylibrary.R;
+import com.ecar.skeyboard.R;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

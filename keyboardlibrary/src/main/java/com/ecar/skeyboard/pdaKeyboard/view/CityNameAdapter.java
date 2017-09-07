@@ -1,4 +1,4 @@
-package com.ecar.mylibrary.pdaKeyboard.view;
+package com.ecar.skeyboard.pdaKeyboard.view;
 
 import android.content.Context;
 import android.view.Gravity;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.ecar.mylibrary.R;
+import com.ecar.skeyboard.R;
 
 public class CityNameAdapter extends BaseAdapter implements OnClickListener {
 

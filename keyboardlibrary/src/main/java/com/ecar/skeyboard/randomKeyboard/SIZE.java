@@ -1,4 +1,4 @@
-package com.ecar.mylibrary.randomKeyboard;
+package com.ecar.skeyboard.randomKeyboard;
 
 public class SIZE {
 
