@@ -1,4 +1,4 @@
-package com.ecar.skeyboard.pdaKeyboard;
+package com.ecar.skeyboard.pdakeyboard;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

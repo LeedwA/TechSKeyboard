@@ -1,4 +1,4 @@
-package com.ecar.skeyboard.pdaKeyboard;
+package com.ecar.skeyboard.pdakeyboard;
 
 import android.app.Activity;
 import android.graphics.drawable.ColorDrawable;
@@ -6,7 +6,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.ecar.skeyboard.pdaKeyboard.view.CityPopupWindow;
+import com.ecar.skeyboard.commonkeyboard.view.GroupCarNumView;
+import com.ecar.skeyboard.pdakeyboard.view.CityPopupWindow;
 
 /*************************************
  功能：
@@ -17,7 +18,9 @@ import com.ecar.skeyboard.pdaKeyboard.view.CityPopupWindow;
 
 public class PdaKeyboardCityUtil {
 
-    CityPopupWindow cityPopupWindow;
+    CityPopupWindow cityPopupWindow;  //城市布局
+    private GroupCarNumView mGroupCarNumView;//自定义车牌输入框
+
 
     //    cityTextView  显示城市代号的textview     onSelectCity  选择后的回调  点击无车牌时会返回“”  onClicked  城市被点击后回调
     public PdaKeyboardCityUtil(final Activity context, TextView cityTextView,

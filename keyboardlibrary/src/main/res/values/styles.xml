@@ -1,6 +1,4 @@
 <resources>
-
-
     <!--KeyboardView 自定义键盘样式-->
     <style name="KeyboardView_style">
         <item name="android:layout_width">wrap_content</item>
@@ -17,6 +15,93 @@
         <item name="android:labelTextSize">18dp</item>
         <item name="android:paddingBottom">10dp</item>
         <item name="android:paddingTop">10dp</item>
+    </style>
+    <!--普通车牌键盘-->
+    <style name="parking_bind_car_city_gv_tx_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/layer_bind_carnum_city_belong_check</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">@dimen/text_middle_level_4</item>
+    </style>
+
+    <!-- 水平分割线的样式 -->
+    <style name="horizontal_line_style">
+        <item name="android:background">@color/line_grey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.1dp</item>
+    </style>
+
+    <!-- 垂直分割线的样式 -->
+    <style name="vertical_line_style">
+        <item name="android:background">@color/line_grey</item>
+        <item name="android:layout_width">0.1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
+    <style name="parking_bind_car_province_tx_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/layer_bind_carnum_city_belong_check</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">@dimen/text_middle_level_4</item>
+    </style>
+
+    <style name="parking_bind_car_province_frist_tx_style" parent="parking_bind_car_province_tx_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/ic_mine_sure</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">@dimen/text_middle_level_4</item>
+    </style>
+
+
+    <!--绑定车牌样式-->
+    <style name="car_char_tx_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/parking_bind_bg_box_normal_right</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_larger_level_3</item>
+    </style>
+
+    <style name="DialogStyleBottom" parent="@android:style/Theme.Dialog">
+
+        <item name="android:windowAnimationStyle">@style/bottom_pop_window_anim_style</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+    <!-- 底部popup动画的style -->
+    <style name="bottom_pop_window_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_show_anim</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/pop_hidden_anim</item>
+        <!-- 指定消失的动画xml -->
     </style>
 
 </resources>

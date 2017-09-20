@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ecar.skeyboard.commonkeyboard.view.GroupCarNumView
+        android:id="@+id/group_car_num"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="48dp" />
+
+    <TextView
+        android:id="@+id/tv_change"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="切换新能源" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_plate"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="@color/red_p"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="获取车牌" />
+
+</LinearLayout>

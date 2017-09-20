@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
 
     <color name="product_list_bac">#efeef4</color>
     <color name="keyboard_blackground">#bababa</color>
@@ -27,12 +24,20 @@
     <color name="orange">#F76809</color>
     <!--亮灰色-->
     <color name="bright_gray">#EcEcEc</color>
+    <color name="transparent">#00000000</color>
+    <color name="line_grey">#eaeaea</color>
+    <color name="text_yellow_deep">#f5bc0c</color>
+    <color name="bind_car_city_name_gv_bg">#d1d5da</color>
+    <!-- 绑定车牌输入框的边框线 -->
+    <color name="line_box">#afafaf</color>
+    <color name="bind_car_num_color">#dee5eb</color>
+    <color name="bind_car_num_color1">#CCCCCC</color>
 
-
-
-
-
-
+    Malformed XPath expression when reading t
+    <!-- bg color -->
+    <color name="bg_current_fee_color">#2E3943</color>
+    <color name="yellow_main">#f6cf07</color>
+    <color name="actionbar_color">#2E3943</color>
     <color name="app_style">#03233b</color>
     <color name="txt_orange">#FF7500</color>
 </resources>

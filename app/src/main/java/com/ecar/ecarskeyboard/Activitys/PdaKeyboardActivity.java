@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.ecar.ecarskeyboard.R;
-import com.ecar.skeyboard.pdaKeyboard.PdaKeyboardCityUtil;
-import com.ecar.skeyboard.pdaKeyboard.PdaKeyboardNumUtil;
-import com.ecar.skeyboard.pdaKeyboard.view.CityPopupWindow;
+import com.ecar.skeyboard.pdakeyboard.PdaKeyboardCityUtil;
+import com.ecar.skeyboard.pdakeyboard.PdaKeyboardNumUtil;
+import com.ecar.skeyboard.pdakeyboard.view.CityPopupWindow;
 
 /*************************************
  功能： pda输入键盘

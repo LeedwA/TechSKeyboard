@@ -1,4 +1,4 @@
-package com.ecar.skeyboard.randomKeyboard;
+package com.ecar.skeyboard.randomkeyboard;
 
 import android.view.MotionEvent;
 import android.view.View;

@@ -1,4 +1,4 @@
-package com.ecar.skeyboard.pdaKeyboard.view;
+package com.ecar.skeyboard.pdakeyboard.view;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;

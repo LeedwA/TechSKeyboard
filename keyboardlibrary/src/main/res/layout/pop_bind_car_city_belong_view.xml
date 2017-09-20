@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rela_keyboard_name"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/keyboard_line1"
+            style="@style/horizontal_line_style" />
+
+        <TextView
+            android:id="@+id/tx_privince_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/keyboard_line1"
+            android:layout_marginRight="5dp"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+            android:padding="5dp"
+            android:text="@string/ok"
+            android:textColor="@color/text_yellow_deep"
+            android:textSize="@dimen/text_middle_level_4"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/ll_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx_privince_sure"
+            android:background="@color/bind_car_city_name_gv_bg"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/ll_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="京"/>
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="津"/>
+
+                <TextView
+                    android:id="@+id/tv_3"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="沪"/>
+
+                <TextView
+                    android:id="@+id/tv_4"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="渝"/>
+
+                <TextView
+                    android:id="@+id/tv_5"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="蒙"/>
+
+                <TextView
+                    android:id="@+id/tv_6"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="新"/>
+
+                <TextView
+                    android:id="@+id/tv_7"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="藏"/>
+
+                <TextView
+                    android:id="@+id/tv_8"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="宁"/>
+
+                <TextView
+                    android:id="@+id/tv_9"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="桂"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_one"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_10"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="黑"/>
+
+                <TextView
+                    android:id="@+id/tv_11"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="吉"/>
+
+                <TextView
+                    android:id="@+id/tv_12"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="辽"/>
+
+                <TextView
+                    android:id="@+id/tv_13"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="晋"/>
+
+                <TextView
+                    android:id="@+id/tv_14"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="冀"/>
+
+                <TextView
+                    android:id="@+id/tv_15"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="青"/>
+
+                <TextView
+                    android:id="@+id/tv_16"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="鲁"/>
+
+                <TextView
+                    android:id="@+id/tv_17"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="豫"/>
+
+                <TextView
+                    android:id="@+id/tv_18"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="苏"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_two"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_19"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="皖"/>
+
+                <TextView
+                    android:id="@+id/tv_20"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="浙"/>
+
+                <TextView
+                    android:id="@+id/tv_21"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="闽"/>
+
+                <TextView
+                    android:id="@+id/tv_22"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="赣"/>
+
+                <TextView
+                    android:id="@+id/tv_23"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="湘"/>
+
+                <TextView
+                    android:id="@+id/tv_24"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="鄂"/>
+
+                <TextView
+                    android:id="@+id/tv_25"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="粤"/>
+
+                <TextView
+                    android:id="@+id/tv_26"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="琼"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_three"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_27"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="甘"/>
+
+                <TextView
+                    android:id="@+id/tv_28"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="陕"/>
+
+                <TextView
+                    android:id="@+id/tv_29"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="贵"/>
+
+                <TextView
+                    android:id="@+id/tv_30"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="云"/>
+
+                <TextView
+                    android:id="@+id/tv_31"
+                    style="@style/parking_bind_car_province_tx_style"
+                    android:text="川"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tx_car_city_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bind_carnum_delete_bg"
+                android:drawableLeft="@drawable/parking_bind_delete"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rela_keyboard_num_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/keyboard_line"
+            style="@style/horizontal_line_style"
+            />
+        <!--android:layout_below="@id/keyboard_line"-->
+        <TextView
+            android:id="@+id/tx_num_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+            android:padding="5dp"
+            android:text="@string/ok"
+            android:textColor="@color/text_yellow_deep"
+            android:textSize="@dimen/text_middle_level_4"
+            android:visibility="visible" />
+        <!--android:layout_below="@id/tx_num_sure"-->
+
+        <View
+            android:id="@+id/car_gray_view"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/bind_car_city_name_gv_bg" />
+
+        <!--android:layout_below="@id/car_gray_view"-->
+        <GridView
+            android:visibility="visible"
+            android:id="@+id/gv_nums"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bind_car_city_name_gv_bg"
+            android:columnWidth="5dp"
+            android:horizontalSpacing="5dp"
+            android:numColumns="10"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp" />
+
+        <!--android:layout_below="@id/gv_nums"-->
+        <GridView
+            android:id="@+id/gv_cars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bind_car_city_name_gv_bg"
+            android:columnWidth="5dp"
+            android:horizontalSpacing="5dp"
+            android:numColumns="10"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp" />
+    </LinearLayout>
+
+</LinearLayout>

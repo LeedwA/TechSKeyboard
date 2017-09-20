@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">MoveKeyBoard</string>
     <string name="no_car_plate">无车牌</string>
+    <!--共用-->
+    <string name="ok">确定</string>
+    <string name="ok_space">确 定</string>
+    <string name="cancel">取消</string>
+    <string name="edit">编辑</string>
+    <string name="setting">设置</string>
+    <string name="modify">修改</string>
+    <string name="next">下一步</string>
+    <string name="commit">提交</string>
+    <string name="done">完成</string>
+    <string name="refresh">刷新</string>
+    <string name="back">返回</string>
+    <string name="save">保存</string>
+    <!-- 默认车牌首个字符 -->
+    <item name="default_car_code_first" type="string">粤</item>
+    <!-- 默认省份 -->
+    <item name="default_province" type="string">广东</item>
+    <!-- 默认城市 -->
+    <item name="default_city" type="string">深圳</item>
+    <!-- 默认车牌第二个字符 -->
+    <item name="default_car_code" type="string">B</item>
 </resources>

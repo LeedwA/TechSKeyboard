@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout style="@style/car_char_tx_style">
+
+        <TextView
+            android:id="@+id/char_text1"
+            style="@style/car_char_tx_style"
+            android:text="@string/default_car_code_first" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/char_text2"
+        style="@style/car_char_tx_style" />
+
+    <TextView
+        android:id="@+id/char_text3"
+        style="@style/car_char_tx_style" />
+
+    <TextView
+        android:id="@+id/char_text4"
+        style="@style/car_char_tx_style" />
+
+    <TextView
+        android:id="@+id/char_text5"
+        style="@style/car_char_tx_style" />
+
+    <TextView
+        android:id="@+id/char_text6"
+        style="@style/car_char_tx_style" />
+
+    <TextView
+        android:id="@+id/char_text7"
+        style="@style/car_char_tx_style" />
+
+    <TextView
+        android:id="@+id/char_text8"
+        style="@style/car_char_tx_style"
+        android:visibility="gone" />
+</LinearLayout>
