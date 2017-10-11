@@ -270,7 +270,7 @@
             android:layout_marginRight="5dp"
             android:background="@color/white"
             android:gravity="right|center_vertical"
-            android:padding="5dp"
+            android:padding="8dp"
             android:text="@string/ok"
             android:textColor="@color/text_yellow_deep"
             android:textSize="@dimen/text_middle_level_4"

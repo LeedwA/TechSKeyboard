@@ -5,7 +5,9 @@
     android:gravity="center_vertical"
     android:orientation="horizontal">
 
-    <LinearLayout style="@style/car_char_tx_style">
+    <LinearLayout
+        style="@style/car_char_tx_style"
+        android:background="@drawable/parking_bind_bg_box_preess_left">
 
         <TextView
             android:id="@+id/char_text1"
