@@ -46,10 +46,18 @@ public class CityPopupWindow {
         if (mCityPop == null) {
             final View view = View.inflate(mContext, R.layout.pub_pop_city_name, null);
             TextView tv_none_num = (TextView) view.findViewById(R.id.tv_none_num);
+
             tv_none_num.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     mOnSecectCallback.getCityFromClick("");
+                }
+            });
+            TextView tv_wj = (TextView) view.findViewById(R.id.tv_wj);//武警车牌
+            tv_wj.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mOnSecectCallback.getCityFromClick("WJ");
                 }
             });
             GridView gvCityName = (GridView) view

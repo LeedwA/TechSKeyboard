@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">MoveKeyBoard</string>
     <string name="no_car_plate">无车牌</string>
+    <string name="no_car_wj">武警</string>
+
     <!--共用-->
     <string name="ok">确定</string>
     <string name="ok_space">确 定</string>

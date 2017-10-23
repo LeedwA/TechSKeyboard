@@ -14,9 +14,11 @@ import com.ecar.skeyboard.R;
 public class CityNameAdapter extends BaseAdapter implements OnClickListener {
 
     private Context context;
-    private String[] provinces = {"皖", "苏", "赣", "浙", "豫", "鲁", "粤", "京",
-            "津", "沪", "渝", "蒙", "新", "藏", "宁", "桂", "港", "澳", "黑", "吉",
-            "辽", "晋", "冀", "青", "闽", "湘", "鄂", "琼", "甘", "陕", "黔", "云",
+    private String[] provinces = {
+            "皖", "苏", "赣", "浙", "豫", "鲁", "粤", "京",
+            "津", "沪", "渝", "蒙", "新", "藏", "宁", "桂",
+            "港", "澳", "黑", "吉", "辽", "晋", "冀", "青",
+            "闽", "湘", "鄂", "琼", "甘", "陕", "黔", "云",
             "川", "台", "贵"};
 
     public CityNameAdapter(Context context) {
@@ -42,7 +44,7 @@ public class CityNameAdapter extends BaseAdapter implements OnClickListener {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         TextView city = null;
-        if (position < 35) {
+        if (position < provinces.length) {
             city = (TextView) LayoutInflater.from(context).inflate(
                     R.layout.pub_item_city_name, null);
             city.setText(provinces[position]);
