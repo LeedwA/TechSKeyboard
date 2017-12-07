@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.text.Editable;
+import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -36,8 +37,13 @@ public class PdaKeyboardNumUtil {
     public boolean isUpper = true;// 是否大写
     public boolean isEnable = true;// 是否启用
 
+
+    public boolean isVibrate=true;// 是否震动
+
+
     private EditText ed;
     private SlideView mSlideView;
+
 
     public PdaKeyboardNumUtil(KeyboardView keyboardView, Activity ctx, EditText edit) {
         initKeyboard(ctx, edit, keyboardView);
@@ -50,6 +56,11 @@ public class PdaKeyboardNumUtil {
 
     public PdaKeyboardNumUtil(Activity ctx, EditText edit, KeyboardView keyboardView) {
         initKeyboard(ctx, edit, keyboardView);
+    }
+
+    public PdaKeyboardNumUtil setVibrate(boolean vibrate) {
+        isVibrate = vibrate;
+        return this;
     }
 
     private void initKeyboard(final Activity ctx, EditText edit, KeyboardView keyboardView) {
@@ -118,6 +129,10 @@ public class PdaKeyboardNumUtil {
         @Override
         public void onKey(int primaryCode, int[] keyCodes) {
             Editable editable = ed.getText();
+            if (isVibrate)  //是否震动
+            {
+                ed.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
+            }
             int start = ed.getSelectionStart();
             if (primaryCode == Keyboard.KEYCODE_DONE) {// 完成
                 if (mSlideView != null)
@@ -186,8 +201,9 @@ public class PdaKeyboardNumUtil {
     }
 
     //隐藏/显示输入框  isShow true显示
-    public void showEdit(boolean isShow) {
+    public PdaKeyboardNumUtil showEdit(boolean isShow) {
         this.ed.setVisibility(isShow ? View.VISIBLE : View.INVISIBLE);
+        return this;
     }
 
 

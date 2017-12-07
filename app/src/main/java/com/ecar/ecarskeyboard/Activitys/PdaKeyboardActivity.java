@@ -47,7 +47,8 @@ public class PdaKeyboardActivity extends Activity {
             public void clicked() {
                 pdaKeyboardUtil.hideKeyboard();
             }
-        });
+        }).setVibrate(true);
+
         //车牌号选择键盘
         KeyboardView keyboardView = (KeyboardView) findViewById(R.id.view_kbview);
         final EditText normal_ed1 = (EditText) findViewById(R.id.normal_ed1);
@@ -56,7 +57,7 @@ public class PdaKeyboardActivity extends Activity {
             public void hideView() {
 
             }
-        }).setUpper(true);//转为大写
+        }).setUpper(true).setVibrate(true);//转为大写
 
 
     }

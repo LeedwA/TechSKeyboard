@@ -61,6 +61,7 @@ public class CityDigitalAdapter extends BaseAdapter implements OnClickListener {
     private OnTextItemOnClickListener onTextItemOnClickListener;
 
     public void setOnTextItemOnClickListener(
+            
             OnTextItemOnClickListener onTextItemOnClickListener) {
         this.onTextItemOnClickListener = onTextItemOnClickListener;
     }

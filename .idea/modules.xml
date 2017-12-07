@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EcarSKeyboard.iml" filepath="$PROJECT_DIR$/EcarSKeyboard.iml" />
+      <module fileurl="file://D:\kims\cheweiguanjia\Demo\TechSKeyboard\EcarSKeyboard.iml" filepath="D:\kims\cheweiguanjia\Demo\TechSKeyboard\EcarSKeyboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/TechSKeyboard.iml" filepath="$PROJECT_DIR$/TechSKeyboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/keyboardlibrary/keyboardlibrary.iml" filepath="$PROJECT_DIR$/keyboardlibrary/keyboardlibrary.iml" />

@@ -3,6 +3,7 @@ package com.ecar.skeyboard.pdakeyboard;
 import android.app.Activity;
 import android.graphics.drawable.ColorDrawable;
 import android.view.Gravity;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.TextView;
 
@@ -22,15 +23,23 @@ public class PdaKeyboardCityUtil {
     private GroupCarNumView mGroupCarNumView;//自定义车牌输入框
 
 
+    boolean isVibrate = true;   //是否震动
+
+    public PdaKeyboardCityUtil setVibrate(boolean vibrate) {
+        cityPopupWindow.setVibrate(vibrate);
+        isVibrate = vibrate;
+        return this;
+    }
+
     //    cityTextView  显示城市代号的textview     onSelectCity  选择后的回调  点击无车牌时会返回“”  onClicked  城市被点击后回调
-    public PdaKeyboardCityUtil(final Activity context, TextView cityTextView,
+    public PdaKeyboardCityUtil(final Activity context, final TextView cityTextView,
                                CityPopupWindow.OnSelectCity onSelectCity,
                                final CityPopupWindow.OnClicked onClicked) {
         cityTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showPop(context);
-                if(onClicked!=null){
+                if (onClicked != null) {
                     onClicked.clicked();
                 }
             }
@@ -50,8 +59,6 @@ public class PdaKeyboardCityUtil {
             cityPopupWindow.getmCityPop().dismiss();
         }
     }
-
-
 
 
 }

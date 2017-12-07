@@ -1,8 +1,10 @@
 package com.ecar.skeyboard.commonkeyboard.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -38,6 +40,7 @@ public class CarKeyboardView extends LinearLayout implements View.OnClickListene
     private int[] numResChange = {R.id.tv_19,
             R.id.tv_20, R.id.tv_21, R.id.tv_22, R.id.tv_23, R.id.tv_24, R.id.tv_25, R.id.tv_26, R.id.tv_27, R.id.tv_28, R.id.tv_29,
             R.id.tv_30, R.id.tv_31};
+    private boolean isVibrate = true; //是否震动
 
     public CarKeyboardView(Context context) {
         super(context);
@@ -122,9 +125,14 @@ public class CarKeyboardView extends LinearLayout implements View.OnClickListene
         setKeyboard(1);
     }
 
+    @SuppressLint("NewApi")
     private void setIText(View view) {
         if (onTextListener != null) {
             String trim = ((TextView) view).getText().toString().trim();
+            if (isVibrate)  //是否震动
+            {
+                this.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
+            }
             if (!TextUtils.isEmpty(trim)) {
                 onTextListener.onText(trim);
             } else {
@@ -167,6 +175,10 @@ public class CarKeyboardView extends LinearLayout implements View.OnClickListene
             setIText(view);
 
         }
+    }
+
+    public void setVibrate(boolean isVibrate) {
+        this.isVibrate = isVibrate;
     }
 
 

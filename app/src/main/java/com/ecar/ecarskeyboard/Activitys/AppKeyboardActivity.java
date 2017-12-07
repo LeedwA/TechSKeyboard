@@ -3,6 +3,7 @@ package com.ecar.ecarskeyboard.Activitys;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.TextView;
 
@@ -48,7 +49,7 @@ public class AppKeyboardActivity extends Activity {
                     public void onDelete() {
                         mGroupCarNumView.delete();
                     }
-                });
+                },true);
         final TextView tv_plate = (TextView) findViewById(R.id.tv_plate);
         TextView tv_change = (TextView) findViewById(R.id.tv_change);
         tv_change.setOnClickListener(new View.OnClickListener() {

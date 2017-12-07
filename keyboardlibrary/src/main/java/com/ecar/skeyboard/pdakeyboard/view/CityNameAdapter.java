@@ -2,6 +2,7 @@ package com.ecar.skeyboard.pdakeyboard.view;
 
 import android.content.Context;
 import android.view.Gravity;
+import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,6 +21,13 @@ public class CityNameAdapter extends BaseAdapter implements OnClickListener {
             "港", "澳", "黑", "吉", "辽", "晋", "冀", "青",
             "闽", "湘", "鄂", "琼", "甘", "陕", "黔", "云",
             "川", "台", "贵"};
+
+    public void setVibrate(boolean vibrate) {
+        isVibrate = vibrate;
+    }
+
+    boolean isVibrate=true;
+
 
     public CityNameAdapter(Context context) {
         super();
@@ -68,6 +76,10 @@ public class CityNameAdapter extends BaseAdapter implements OnClickListener {
 
     @Override
     public void onClick(View v) {
+        if (isVibrate)  //是否震动
+        {
+            v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
+        }
         onTextItemOnClickListener.onTextItemOnClick(v);
     }
 

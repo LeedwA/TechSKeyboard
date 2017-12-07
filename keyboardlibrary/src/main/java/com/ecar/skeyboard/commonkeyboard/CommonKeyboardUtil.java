@@ -40,30 +40,27 @@ public class CommonKeyboardUtil {
     private GroupCarNumView mGroupCarNumView;//自定义车牌输入框
     private CarKeyboardView mCarKeyboardView;//自定义车牌键盘
 
+
+    private boolean isVibrate = true;//是否震动
+
     public void setOnTextClicked(CarKeyboardView.OnTextListener onTextClicked) {
         this.onTextClicked = onTextClicked;
 
     }
+
     /**
-     *     @Override
-    public void onText(String text) {
-    mGroupCarNumView.setContent(text);
-
-    }
-
-     @Override
-     public void onSure() {
-     hidePopcity();
-
-     }
-
-     @Override
-     public void onDelete() {
-     mGroupCarNumView.delete();
-     }
-     *
-     *
-     * **/
+     * @Override public void onText(String text) {
+     * mGroupCarNumView.setContent(text);
+     * <p>
+     * }
+     * @Override public void onSure() {
+     * hidePopcity();
+     * <p>
+     * }
+     * @Override public void onDelete() {
+     * mGroupCarNumView.delete();
+     * }
+     **/
 
     CarKeyboardView.OnTextListener onTextClicked;
 
@@ -86,13 +83,25 @@ public class CommonKeyboardUtil {
         });
     }
 
-
+    //  isVibrate是否震动
     public CommonKeyboardUtil(Activity activity, GroupCarNumView mGroupCarNumView, CarKeyboardView.OnTextListener onTextClicked) {
         this.context = activity;
         this.mGroupCarNumView = mGroupCarNumView;
         this.onTextClicked = onTextClicked;
         initData();
     }
+
+
+    //  isVibrate是否震动
+    public CommonKeyboardUtil(Activity activity, GroupCarNumView mGroupCarNumView, CarKeyboardView.OnTextListener onTextClicked, boolean isVibrate) {
+        this.context = activity;
+        this.mGroupCarNumView = mGroupCarNumView;
+        this.onTextClicked = onTextClicked;
+        initData();
+        this.isVibrate = isVibrate;
+
+    }
+
 
     //设置默认城市
     public void setDefaultProvince(int index) {
@@ -144,6 +153,7 @@ public class CommonKeyboardUtil {
         if (!mHelper.isShowing()) {
             mHelper.showPopupWindow(mCarKeyboardView, context.getWindow().getDecorView(), 1.0f);
         }
+        mCarKeyboardView.setVibrate(isVibrate);
     }
 
     public void hidePopcity() {

@@ -2,6 +2,7 @@ package com.ecar.skeyboard.pdakeyboard.view;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -10,6 +11,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.ecar.skeyboard.R;
+import com.ecar.skeyboard.pdakeyboard.PdaKeyboardCityUtil;
 
 
 /**
@@ -35,6 +37,16 @@ public class CityPopupWindow {
     private OnSelectCity mOnSecectCallback;
     private Context mContext;
 
+    public boolean isVibrate=true;// 是否震动
+    private CityNameAdapter cityNameAdapter;
+
+
+    public CityPopupWindow setVibrate(boolean vibrate) {
+        isVibrate = vibrate;
+        cityNameAdapter.setVibrate(vibrate);
+        return this;
+    }
+
     public CityPopupWindow(Context context, OnSelectCity callback) {
         mContext = context;
         mOnSecectCallback = callback;
@@ -50,14 +62,14 @@ public class CityPopupWindow {
             tv_none_num.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mOnSecectCallback.getCityFromClick("");
+                    itemClicked("");
                 }
             });
             TextView tv_wj = (TextView) view.findViewById(R.id.tv_wj);//武警车牌
             tv_wj.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mOnSecectCallback.getCityFromClick("WJ");
+                    itemClicked("WJ");
                 }
             });
             GridView gvCityName = (GridView) view
@@ -65,15 +77,16 @@ public class CityPopupWindow {
             gvCityName.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    mOnSecectCallback.getCityFromClick(((TextView) view).getText().toString().trim());
+                    itemClicked(((TextView) view).getText().toString().trim());
                 }
             });
-            CityNameAdapter cityNameAdapter = new CityNameAdapter(mContext);
+            cityNameAdapter = new CityNameAdapter(mContext);
             cityNameAdapter.setOnTextItemOnClickListener(new CityNameAdapter.OnTextItemOnClickListener() {
                 @Override
                 public void onTextItemOnClick(View city) {
-                    mOnSecectCallback.getCityFromClick(((TextView) city).getText().toString()
+                    itemClicked(((TextView) city).getText().toString()
                             .trim());
+
                 }
             });
             gvCityName.setAdapter(cityNameAdapter);
@@ -81,6 +94,29 @@ public class CityPopupWindow {
                     ViewGroup.LayoutParams.WRAP_CONTENT);
             mCityPop.setBackgroundDrawable(new BitmapDrawable());
             mCityPop.setFocusable(true);
+        }
+    }
+
+    /****************************************
+     方法描述： 城市名选择监听
+     @param
+     @return
+     ****************************************/
+    private void itemClicked(String str) {
+        virate(mCityPop.getContentView());
+        mOnSecectCallback.getCityFromClick(str);
+        mCityPop.dismiss();
+    }
+
+    /****************************************
+    方法描述：震动
+    @param
+    @return
+    ****************************************/
+    private void virate(View view) {
+        if (isVibrate)  //是否震动
+        {
+            view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
         }
     }
 
