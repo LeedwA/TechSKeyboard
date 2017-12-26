@@ -27,14 +27,15 @@
             android:codes="118"
             android:horizontalGap="2%p"
             android:keyIcon="@mipmap/keyboard_ic_v"/>
-
         <Key
-            android:codes="-4"
             android:horizontalGap="2%p"
-            android:isModifier="true"
-            android:isSticky="true"
+            android:codes="-5"
+            android:iconPreview="@mipmap/pub_delete"
+            android:isRepeatable="true"
             android:keyEdgeFlags="right"
-            android:keyIcon="@mipmap/keyboard_ic_close"/>
+            android:isModifier="true"
+            android:keyIcon="@mipmap/pub_delete"/>
+
     </Row>
 
     <Row android:verticalGap="1%p">
@@ -109,13 +110,14 @@
             android:horizontalGap="1%p"
             android:keyIcon="@mipmap/keyboard_ic_gua"/>
 
+
         <Key
-            android:codes="-5"
+            android:codes="-4"
             android:horizontalGap="61%p"
-            android:iconPreview="@mipmap/pub_delete"
-            android:isRepeatable="true"
+
+            android:isSticky="true"
             android:keyEdgeFlags="right"
-            android:keyIcon="@mipmap/pub_delete"/>
+            android:keyIcon="@mipmap/keyboard_ic_close"/>
     </Row>
 
 </Keyboard>
