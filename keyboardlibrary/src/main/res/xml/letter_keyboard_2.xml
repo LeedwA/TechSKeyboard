@@ -30,8 +30,8 @@
             android:keyLabel="V" />
         <Key
             android:codes="-5"
-            android:horizontalGap="2%p"
             android:iconPreview="@mipmap/pub_delete"
+            android:horizontalGap="2%p"
             android:isModifier="true"
             android:isRepeatable="true"
             android:keyEdgeFlags="right"
@@ -113,7 +113,7 @@
 
         <Key
             android:codes="-4"
-            android:horizontalGap="60%p"
+            android:horizontalGap="61.5%p"
             android:isSticky="true"
             android:keyLabel="关闭" />
     </Row>
