@@ -71,12 +71,15 @@
     </Row>
 
     <Row android:verticalGap="1%p">
+        <Key
+            android:codes="105"
+            android:horizontalGap="1%p"
+            android:keyEdgeFlags="left"
+            android:keyLabel="I" />
 
         <Key
             android:codes="106"
-
-            android:horizontalGap="1%p"
-            android:keyEdgeFlags="left"
+            android:horizontalGap="2%p"
             android:keyLabel="J" />
         <Key
             android:codes="107"
@@ -85,12 +88,8 @@
         <Key
             android:codes="108"
             android:horizontalGap="2%p"
-            android:keyLabel="l" />
+            android:keyLabel="L" />
 
-        <Key
-            android:codes="109"
-            android:horizontalGap="2%p"
-            android:keyLabel="m" />
 
         <Key
             android:codes="-2"
@@ -104,23 +103,24 @@
     <Row android:verticalGap="1%p">
 
         <Key
-            android:codes="110"
+            android:codes="109"
             android:horizontalGap="1%p"
             android:keyEdgeFlags="left"
-            android:keyLabel="n" />
+            android:keyLabel="M" />
+
+        <Key
+            android:codes="110"
+            android:horizontalGap="2%p"
+            android:keyLabel="N" />
+        <Key
+            android:codes="111"
+            android:horizontalGap="2%p"
+            android:keyLabel="O" />
         <Key
             android:codes="112"
             android:horizontalGap="2%p"
-            android:keyLabel="p" />
+            android:keyLabel="P" />
 
-        <Key
-            android:codes="113"
-            android:horizontalGap="2%p"
-            android:keyLabel="q" />
-        <Key
-            android:codes="114"
-            android:horizontalGap="2%p"
-            android:keyLabel="r" />
 
 
         <Key

@@ -9,11 +9,19 @@
 
 
     <Row android:verticalGap="1%p">
+        <Key
+            android:codes="113"
+            android:horizontalGap="1%p"
+            android:keyEdgeFlags="left"
+            android:keyLabel="Q" />
+        <Key
+            android:codes="114"
+            android:horizontalGap="2%p"
+            android:keyLabel="R" />
 
         <Key
             android:codes="115"
-            android:horizontalGap="1%p"
-            android:keyEdgeFlags="left"
+            android:horizontalGap="2%p"
             android:keyLabel="S" />
         <Key
             android:codes="116"
@@ -21,17 +29,9 @@
             android:keyLabel="T" />
 
         <Key
-            android:codes="117"
-            android:horizontalGap="2%p"
-            android:keyLabel="U" />
-        <Key
-            android:codes="118"
-            android:horizontalGap="2%p"
-            android:keyLabel="V" />
-        <Key
             android:codes="-5"
-            android:iconPreview="@mipmap/pub_delete"
             android:horizontalGap="2%p"
+            android:iconPreview="@mipmap/pub_delete"
             android:isModifier="true"
             android:isRepeatable="true"
             android:keyEdgeFlags="right"
@@ -41,27 +41,23 @@
 
     <Row android:verticalGap="1%p">
 
-
         <Key
-            android:codes="119"
+            android:codes="117"
             android:horizontalGap="1%p"
             android:keyEdgeFlags="left"
+            android:keyLabel="U" />
+        <Key
+            android:codes="118"
+            android:horizontalGap="2%p"
+            android:keyLabel="V" />
+        <Key
+            android:codes="119"
+            android:horizontalGap="2%p"
             android:keyLabel="W" />
         <Key
             android:codes="120"
             android:horizontalGap="2%p"
             android:keyLabel="X" />
-
-        <Key
-            android:codes="121"
-            android:horizontalGap="2%p"
-            android:keyLabel="Y" />
-
-
-        <Key
-            android:codes="122"
-            android:horizontalGap="2%p"
-            android:keyLabel="Z" />
 
 
         <Key
@@ -74,26 +70,29 @@
     </Row>
 
     <Row android:verticalGap="1%p">
+        <Key
+            android:codes="121"
+            android:horizontalGap="1%p"
+            android:keyEdgeFlags="left"
+            android:keyLabel="Y" />
+
+
+        <Key
+            android:codes="122"
+            android:horizontalGap="2%p"
+            android:keyLabel="Z" />
 
 
         <Key
             android:codes="28207"
-            android:horizontalGap="1%p"
-            android:keyEdgeFlags="left"
+            android:horizontalGap="2%p"
             android:keyLabel="港" />
         <Key
             android:codes="28595"
             android:horizontalGap="2%p"
             android:keyLabel="澳" />
 
-        <Key
-            android:codes="35686"
-            android:horizontalGap="2%p"
-            android:keyLabel="警" />
-        <Key
-            android:codes="23398"
-            android:horizontalGap="2%p"
-            android:keyLabel="学" />
+
         <Key
             android:codes="-2"
             android:horizontalGap="2%p"
@@ -105,15 +104,24 @@
 
     <Row android:verticalGap="1%p">
         <Key
-            android:codes="25346"
+            android:codes="35686"
             android:horizontalGap="1%p"
             android:keyEdgeFlags="left"
+            android:keyLabel="警" />
+        <Key
+            android:codes="23398"
+            android:horizontalGap="2%p"
+            android:keyLabel="学" />
+        <Key
+            android:codes="25346"
+            android:horizontalGap="2%p"
+
             android:keyLabel="挂" />
 
 
         <Key
             android:codes="-4"
-            android:horizontalGap="61.5%p"
+            android:horizontalGap="22%p"
             android:isSticky="true"
             android:keyLabel="关闭" />
     </Row>
