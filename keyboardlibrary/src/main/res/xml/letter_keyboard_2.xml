@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
-          android:horizontalGap="1%p"
-          android:keyHeight="10%p"
-          android:keyWidth="18%p"
-          android:shadowColor="@color/white"
-          android:verticalGap="1%p">
+    android:horizontalGap="1%p"
+    android:keyHeight="10%p"
+    android:keyWidth="18%p"
+    android:shadowColor="@color/white"
+    android:shadowRadius="0.0"
+    android:verticalGap="1%p">
 
 
     <Row android:verticalGap="1%p">
@@ -13,28 +14,28 @@
             android:codes="115"
             android:horizontalGap="1%p"
             android:keyEdgeFlags="left"
-            android:keyIcon="@mipmap/keyboard_ic_s"/>
+            android:keyLabel="S" />
         <Key
             android:codes="116"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_t"/>
+            android:keyLabel="T" />
 
         <Key
             android:codes="117"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_u"/>
+            android:keyLabel="U" />
         <Key
             android:codes="118"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_v"/>
+            android:keyLabel="V" />
         <Key
-            android:horizontalGap="2%p"
             android:codes="-5"
+            android:horizontalGap="2%p"
             android:iconPreview="@mipmap/pub_delete"
+            android:isModifier="true"
             android:isRepeatable="true"
             android:keyEdgeFlags="right"
-            android:isModifier="true"
-            android:keyIcon="@mipmap/pub_delete"/>
+            android:keyIcon="@mipmap/pub_delete" />
 
     </Row>
 
@@ -45,22 +46,22 @@
             android:codes="119"
             android:horizontalGap="1%p"
             android:keyEdgeFlags="left"
-            android:keyIcon="@mipmap/keyboard_ic_w"/>
+            android:keyLabel="W" />
         <Key
             android:codes="120"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_x"/>
+            android:keyLabel="X" />
 
         <Key
             android:codes="121"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_y"/>
+            android:keyLabel="Y" />
 
 
         <Key
             android:codes="122"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_z"/>
+            android:keyLabel="Z" />
 
 
         <Key
@@ -69,55 +70,52 @@
             android:isModifier="true"
             android:isSticky="true"
             android:keyEdgeFlags="right"
-            android:keyIcon="@mipmap/keyboard_ic_up"/>
+            android:keyLabel="上页" />
     </Row>
 
     <Row android:verticalGap="1%p">
-
 
 
         <Key
             android:codes="28207"
             android:horizontalGap="1%p"
             android:keyEdgeFlags="left"
-            android:keyIcon="@mipmap/keyboard_ic_gang"/>
+            android:keyLabel="港" />
         <Key
             android:codes="28595"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_ao"/>
+            android:keyLabel="澳" />
 
         <Key
             android:codes="35686"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_jing"/>
+            android:keyLabel="警" />
         <Key
             android:codes="23398"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_xue"/>
+            android:keyLabel="学" />
         <Key
             android:codes="-2"
             android:horizontalGap="2%p"
             android:isModifier="true"
             android:isSticky="true"
             android:keyEdgeFlags="right"
-            android:keyIcon="@mipmap/keyboard_ic_figure"/>
+            android:keyLabel="数字" />
     </Row>
 
     <Row android:verticalGap="1%p">
         <Key
             android:codes="25346"
-            android:keyEdgeFlags="left"
             android:horizontalGap="1%p"
-            android:keyIcon="@mipmap/keyboard_ic_gua"/>
+            android:keyEdgeFlags="left"
+            android:keyLabel="挂" />
 
 
         <Key
             android:codes="-4"
-            android:horizontalGap="61%p"
-
+            android:horizontalGap="60%p"
             android:isSticky="true"
-            android:keyEdgeFlags="right"
-            android:keyIcon="@mipmap/keyboard_ic_close"/>
+            android:keyLabel="关闭" />
     </Row>
 
 </Keyboard>

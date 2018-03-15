@@ -72,7 +72,7 @@ public class PdaKeyboardNumUtil {
         this.keyboardView = keyboardView;
         keyboardView.setKeyboard(kLetter1);
         keyboardView.setEnabled(true);
-        keyboardView.setPreviewEnabled(true);
+        keyboardView.setPreviewEnabled(false);
         keyboardView.setOnKeyboardActionListener(listener);
         ed.setOnTouchListener(new View.OnTouchListener() {
             @Override

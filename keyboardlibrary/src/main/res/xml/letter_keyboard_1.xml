@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
     android:keyHeight="10%p"
-    android:keyWidth="18%p"
+    android:keyWidth="18.1%p"
     android:shadowColor="#FFFFFF"
+    android:shadowRadius="0.0"
     android:verticalGap="1%p">
 
     <Row android:verticalGap="1%p">
         <Key
             android:codes="97"
-            android:horizontalGap="1%p"
-            android:keyEdgeFlags="left"
-            android:keyIcon="@mipmap/keyboard_ic_a" />
+             android:keyLabel="A" />
         <Key
             android:codes="98"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_b" />
+            android:keyEdgeFlags="left"
+             android:keyLabel="B" />
         <Key
             android:codes="99"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_c" />
+            android:keyEdgeFlags="left"
+             android:keyLabel="C" />
 
         <Key
             android:codes="100"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_d" />
+            android:keyEdgeFlags="left"
+             android:keyLabel="D" />
         <Key
             android:codes="-5"
-            android:horizontalGap="2%p"
+            android:horizontalGap="2.5%p"
             android:isRepeatable="true"
             android:keyEdgeFlags="right"
+
             android:keyIcon="@mipmap/pub_delete" />
 
     </Row>
@@ -37,91 +40,102 @@
 
         <Key
             android:codes="101"
-            android:horizontalGap="1%p"
             android:keyEdgeFlags="left"
-            android:keyIcon="@mipmap/keyboard_ic_e" />
+
+             android:keyLabel="E" />
 
         <Key
             android:codes="102"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_f" />
+            android:keyEdgeFlags="left"
+
+             android:keyLabel="F" />
         <Key
             android:codes="103"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_g" />
+            android:keyEdgeFlags="left"
+
+             android:keyLabel="G" />
         <Key
             android:codes="104"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_h" />
+            android:keyEdgeFlags="left"
+
+             android:keyLabel="H" />
 
         <Key
             android:codes="-8"
-            android:horizontalGap="2%p"
+            android:horizontalGap="2.5%p"
             android:isModifier="true"
             android:isSticky="true"
+
             android:keyEdgeFlags="right"
-            android:keyIcon="@mipmap/keyboard_ic_down" />
+            android:keyLabel="下页"/>
     </Row>
 
     <Row android:verticalGap="1%p">
 
         <Key
             android:codes="106"
-            android:horizontalGap="1%p"
             android:keyEdgeFlags="left"
-            android:keyIcon="@mipmap/keyboard_ic_j" />
+             android:keyLabel="J" />
         <Key
             android:codes="107"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_k" />
+            android:keyEdgeFlags="left"
+             android:keyLabel="K" />
         <Key
             android:codes="108"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_l" />
+            android:keyEdgeFlags="left"
+             android:keyLabel="L" />
 
         <Key
             android:codes="109"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_m" />
+            android:keyEdgeFlags="left"
+             android:keyLabel="M" />
 
         <Key
             android:codes="-2"
-            android:horizontalGap="2%p"
+            android:horizontalGap="2.5%p"
             android:isModifier="true"
             android:isSticky="true"
             android:keyEdgeFlags="right"
-            android:keyIcon="@mipmap/keyboard_ic_figure" />
+            android:keyLabel="数字" />
     </Row>
 
     <Row android:verticalGap="1%p">
 
         <Key
             android:codes="110"
-            android:horizontalGap="1%p"
             android:keyEdgeFlags="left"
-            android:keyIcon="@mipmap/keyboard_ic_n" />
+             android:keyLabel="N" />
         <Key
             android:codes="112"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_p" />
+            android:keyEdgeFlags="left"
+             android:keyLabel="P" />
 
         <Key
             android:codes="113"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_q" />
+            android:keyEdgeFlags="left"
+             android:keyLabel="Q" />
         <Key
             android:codes="114"
             android:horizontalGap="2%p"
-            android:keyIcon="@mipmap/keyboard_ic_r" />
+            android:keyEdgeFlags="left"
+             android:keyLabel="R" />
 
 
         <Key
             android:codes="-4"
-            android:horizontalGap="2%p"
+            android:horizontalGap="2.5%p"
             android:isModifier="true"
             android:isSticky="true"
             android:keyEdgeFlags="right"
-            android:keyIcon="@mipmap/keyboard_ic_close" />
+            android:keyLabel="关闭"/>
     </Row>
 
 </Keyboard>

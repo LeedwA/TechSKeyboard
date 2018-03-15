@@ -2,13 +2,14 @@
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/city_name_tv"
-    android:layout_width="50dp"
-    android:layout_height="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/pub_city_name_bg"
     android:gravity="center"
     android:padding="3dp"
+    android:text="x"
     android:textColor="@color/black"
-    android:textSize="30sp">
+    android:textSize="26sp">
 </TextView>
 
 
